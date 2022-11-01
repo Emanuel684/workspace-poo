@@ -6,23 +6,23 @@ public class HOTEL {
 		// TODO Auto-generated constructor stub
 	}
 	
-	void HabitacionesDisponibles() {
+	public void HabitacionesDisponibles() {
 		System.out.println("HabitacionesDisponibles()");
 	}
 	
-	void DescuentoClientesHabitaciones() {
+	public void DescuentoClientesHabitaciones() {
 		System.out.println("DescuentoClientesHabitaciones()");
 	}
 	
-	void CambiarPrecioHabitacion() {
+	public void CambiarPrecioHabitacion() {
 		System.out.println("CambiarPrecioHabitacion()");
 	}
 	
-	void CambiarDescuento() {
+	public void CambiarDescuento() {
 		System.out.println("CambiarDescuento()");
 	}
 	
-	void CalcularGanancias() {
+	public void CalcularGanancias(String fechaInicial, String fechaFinal) {
 		System.out.println("CalcularGanancias()");
 	}
 
