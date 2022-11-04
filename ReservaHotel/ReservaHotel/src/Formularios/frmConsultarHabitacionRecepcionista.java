@@ -88,7 +88,7 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 		contentPane.add(lblFotoHabitacion);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/SENCILLA.png")));
+		lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/SIMPLE.png")));
 		lblNewLabel_1.setBounds(269, 133, 472, 306);
 		contentPane.add(lblNewLabel_1);
 		
@@ -98,12 +98,12 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(selectTipoHabitacion == "Habitaciones sencilla") {
 					
-					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/SENCILLA.png")));
+					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/SIMPLE.png")));
 				} else if(selectTipoHabitacion == "Habitaciones doble") {
-					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/codigo.png")));
+					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/DOBLE.jpg")));
 					
 				} else if(selectTipoHabitacion == "Habitaciones matrimonial") {
-					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/programacion.png")));
+					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/MATRIMONIAL.png")));
 					
 				}
 			}
