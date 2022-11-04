@@ -3,12 +3,11 @@ package Clases;
 public class DOBLE extends HABITACION {
 	
 	String Foto;
-	String Precio;
+	public static String Precio = "200000";
 
 	public DOBLE() {
 		// TODO Auto-generated constructor stub
 		this.Foto = "";
-		this.Precio = "200.000";
 	}
 	
 	public void MostrarFoto() {
