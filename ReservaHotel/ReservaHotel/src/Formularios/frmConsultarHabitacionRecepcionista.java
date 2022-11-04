@@ -13,6 +13,7 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import java.awt.Font;
 
 public class frmConsultarHabitacionRecepcionista extends JFrame {
 
@@ -40,7 +41,7 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 	 */
 	public frmConsultarHabitacionRecepcionista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -48,10 +49,12 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Consultar foto habitacion");
-		lblNewLabel.setBounds(152, 11, 164, 14);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel.setBounds(331, 26, 164, 14);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Regresar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -60,38 +63,42 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(227, 229, 105, 23);
+		btnNewButton.setBounds(395, 468, 105, 23);
 		contentPane.add(btnNewButton);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectTipoHabitacion = comboBox.getSelectedItem().toString();
 			}
 		});
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBox.setBounds(37, 85, 164, 22);
+		comboBox.setBounds(46, 116, 164, 22);
 		contentPane.add(comboBox);
 		
 		JLabel lblHabitacionesSencillas = new JLabel("Tipo de habitación");
-		lblHabitacionesSencillas.setBounds(37, 67, 120, 14);
+		lblHabitacionesSencillas.setFont(new Font("Arial", Font.BOLD, 12));
+		lblHabitacionesSencillas.setBounds(46, 98, 120, 14);
 		contentPane.add(lblHabitacionesSencillas);
 		
 		JLabel lblFotoHabitacion = new JLabel("Foto habitacion");
-		lblFotoHabitacion.setBounds(281, 67, 120, 14);
+		lblFotoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
+		lblFotoHabitacion.setBounds(323, 113, 120, 14);
 		contentPane.add(lblFotoHabitacion);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/piton.png")));
-		lblNewLabel_1.setBounds(227, 87, 179, 114);
+		lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/SENCILLA.png")));
+		lblNewLabel_1.setBounds(269, 133, 472, 306);
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnConsultarFoto = new JButton("Consultar");
+		btnConsultarFoto.setFont(new Font("Arial", Font.BOLD, 12));
 		btnConsultarFoto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(selectTipoHabitacion == "Habitaciones sencilla") {
 					
-					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/cliente.png")));
+					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/SENCILLA.png")));
 				} else if(selectTipoHabitacion == "Habitaciones doble") {
 					lblNewLabel_1.setIcon(new ImageIcon(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/codigo.png")));
 					
@@ -101,7 +108,7 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 				}
 			}
 		});
-		btnConsultarFoto.setBounds(112, 229, 105, 23);
+		btnConsultarFoto.setBounds(280, 468, 105, 23);
 		contentPane.add(btnConsultarFoto);
 		
 		

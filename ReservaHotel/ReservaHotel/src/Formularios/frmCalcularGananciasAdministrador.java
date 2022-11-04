@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class frmCalcularGananciasAdministrador extends JFrame {
 
@@ -45,7 +46,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 	 */
 	public frmCalcularGananciasAdministrador() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -53,34 +54,42 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Calcular ganancias");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel.setBounds(155, 11, 130, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_4 = new JLabel("Dia");
+		lblNewLabel_4.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_4.setBounds(49, 36, 49, 14);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Mes");
+		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_5.setBounds(165, 36, 49, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("Año");
+		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_6.setBounds(266, 36, 49, 14);
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_4_1 = new JLabel("Dia");
+		lblNewLabel_4_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_4_1.setBounds(49, 114, 49, 14);
 		contentPane.add(lblNewLabel_4_1);
 		
 		JLabel lblNewLabel_5_1 = new JLabel("Mes");
+		lblNewLabel_5_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_5_1.setBounds(165, 114, 49, 14);
 		contentPane.add(lblNewLabel_5_1);
 		
 		JLabel lblNewLabel_6_1 = new JLabel("Año");
+		lblNewLabel_6_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_6_1.setBounds(266, 114, 49, 14);
 		contentPane.add(lblNewLabel_6_1);
 		
 		JButton btnNewButton = new JButton("Calcular");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -94,6 +103,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Regresar");
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -107,16 +117,19 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("Las ganancias son:");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(49, 184, 133, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		textCalcularGanacias = new JTextField();
+		textCalcularGanacias.setFont(new Font("Arial", Font.BOLD, 12));
 		textCalcularGanacias.setEnabled(false);
 		textCalcularGanacias.setBounds(206, 181, 96, 20);
 		contentPane.add(textCalcularGanacias);
 		textCalcularGanacias.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectDiaInicio = comboBox.getSelectedItem().toString();
@@ -128,6 +141,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.add(comboBox);
 		
 		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectMesInicio = comboBox_1.getSelectedItem().toString();
@@ -139,11 +153,13 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.add(comboBox_1);
 		
 		textYearInicio = new JTextField();
+		textYearInicio.setFont(new Font("Arial", Font.BOLD, 12));
 		textYearInicio.setBounds(259, 62, 96, 20);
 		contentPane.add(textYearInicio);
 		textYearInicio.setColumns(10);
 		
 		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectDiaFinal = comboBox_2.getSelectedItem().toString();
@@ -155,6 +171,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.add(comboBox_2);
 		
 		JComboBox comboBox_1_1 = new JComboBox();
+		comboBox_1_1.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectMesFinal = comboBox_1_1.getSelectedItem().toString();
@@ -166,6 +183,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		contentPane.add(comboBox_1_1);
 		
 		textYearFinal = new JTextField();
+		textYearFinal.setFont(new Font("Arial", Font.BOLD, 12));
 		textYearFinal.setColumns(10);
 		textYearFinal.setBounds(254, 139, 96, 20);
 		contentPane.add(textYearFinal);

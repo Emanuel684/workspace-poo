@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class frmEstimadoPrecioRecepcionista extends JFrame {
 
@@ -45,7 +46,7 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 	 */
 	public frmEstimadoPrecioRecepcionista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -53,6 +54,7 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Regresar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -66,10 +68,12 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("Cédula cliente");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel.setBounds(83, 58, 83, 14);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton_1 = new JButton("Precio estimado");
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -84,35 +88,42 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("El precio estimado es de:");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(52, 186, 166, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		textCalculado = new JTextField();
+		textCalculado.setFont(new Font("Arial", Font.BOLD, 12));
 		textCalculado.setEnabled(false);
 		textCalculado.setBounds(228, 183, 96, 20);
 		contentPane.add(textCalculado);
 		textCalculado.setColumns(10);
 		
 		textCedulaCliente = new JTextField();
+		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textCedulaCliente.setBounds(83, 83, 117, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Tipo habitación");
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(83, 114, 105, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Número de noches");
+		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_3.setBounds(242, 58, 126, 14);
 		contentPane.add(lblNewLabel_3);
 		
 		textNumeroNoches = new JTextField();
+		textNumeroNoches.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroNoches.setText("");
 		textNumeroNoches.setBounds(242, 83, 105, 20);
 		contentPane.add(textNumeroNoches);
 		textNumeroNoches.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectTipoHabitacion = comboBox.getSelectedItem().toString();

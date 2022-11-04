@@ -17,6 +17,7 @@ import Clases.HABITACION;
 import javax.swing.border.BevelBorder;
 import javax.swing.ListSelectionModel;
 import javax.swing.JScrollPane;
+import java.awt.Font;
 
 public class frmListadoHabitacionesRecepcionista extends JFrame {
 
@@ -44,7 +45,7 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 	 */
 	public frmListadoHabitacionesRecepcionista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -52,6 +53,7 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Regresar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -61,25 +63,27 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(168, 202, 89, 23);
+		btnNewButton.setBounds(377, 479, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("Consultar habitaciones");
-		lblNewLabel.setBounds(152, 11, 120, 14);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel.setBounds(346, 25, 160, 14);
 		contentPane.add(lblNewLabel);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(26, 36, 383, 155);
+		scrollPane.setBounds(63, 54, 658, 387);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
+		table.setFont(new Font("Arial", Font.BOLD, 12));
 		scrollPane.setViewportView(table);
 		table.setSurrendersFocusOnKeystroke(true);
 		table.setFillsViewportHeight(true);
 		table.setColumnSelectionAllowed(true);
 		table.setCellSelectionEnabled(true);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		table.setToolTipText("asdw");
+		table.setToolTipText("");
 		table.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		table.setModel(new DefaultTableModel(
 			new HABITACION().HabitacionesDisponibles(),

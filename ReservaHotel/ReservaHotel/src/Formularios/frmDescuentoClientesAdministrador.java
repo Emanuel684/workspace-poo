@@ -17,6 +17,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class frmDescuentoClientesAdministrador extends JFrame {
 
@@ -45,7 +46,7 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 	 */
 	public frmDescuentoClientesAdministrador() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -53,23 +54,28 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Descuento clientes");
-		lblNewLabel.setBounds(162, 11, 102, 14);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel.setBounds(315, 36, 152, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Cedula del\r\n cliente");
-		lblNewLabel_1.setBounds(69, 51, 108, 14);
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel_1.setBounds(231, 148, 108, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		textCedulaCliente = new JTextField();
-		textCedulaCliente.setBounds(69, 76, 108, 20);
+		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		textCedulaCliente.setBounds(231, 173, 108, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Descuento");
-		lblNewLabel_2.setBounds(212, 51, 77, 14);
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel_2.setBounds(374, 148, 77, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Aplicar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HABITUAL descuentoCliente = new HABITUAL();
@@ -83,10 +89,11 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(95, 199, 89, 23);
+		btnNewButton.setBounds(257, 296, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Regresar");
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -96,10 +103,11 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_1.setBounds(216, 199, 89, 23);
+		btnNewButton_1.setBounds(378, 296, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectDescuentoCliente = comboBox.getSelectedItem().toString();
@@ -107,7 +115,7 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 		});
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"0%", "5%", "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%", "80%", "85%", "90%", "95%", "100%"}));
 		comboBox.setToolTipText("Porcentaje");
-		comboBox.setBounds(212, 75, 102, 22);
+		comboBox.setBounds(374, 172, 102, 22);
 		contentPane.add(comboBox);
 	}
 }

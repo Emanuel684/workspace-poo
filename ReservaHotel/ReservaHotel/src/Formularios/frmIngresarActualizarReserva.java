@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class frmIngresarActualizarReserva extends JFrame {
 
@@ -48,7 +49,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 	 */
 	public frmIngresarActualizarReserva(boolean actualizar_view) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -56,6 +57,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Cancelar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -69,24 +71,29 @@ public class frmIngresarActualizarReserva extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		textCedulaCliente = new JTextField();
+		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textCedulaCliente.setColumns(10);
 		textCedulaCliente.setBounds(155, 61, 108, 20);
 		contentPane.add(textCedulaCliente);
 		
 		textNumeroHabitacion = new JTextField();
+		textNumeroHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroHabitacion.setColumns(10);
 		textNumeroHabitacion.setBounds(20, 61, 108, 20);
 		contentPane.add(textNumeroHabitacion);
 		
 		JLabel lblNewLabel_1 = new JLabel("Número habitacion");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(20, 36, 108, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Cédula del cliente");
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(155, 36, 102, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblCrearReserva = new JLabel("Crear reserva");
+		lblCrearReserva.setFont(new Font("Arial", Font.BOLD, 12));
 		lblCrearReserva.setBounds(178, 11, 141, 14);
 		contentPane.add(lblCrearReserva);
 		
@@ -132,6 +139,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 		
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectDia = comboBox.getSelectedItem().toString();
@@ -142,14 +150,17 @@ public class frmIngresarActualizarReserva extends JFrame {
 		contentPane.add(comboBox);
 		
 		JLabel lblNewLabel_4 = new JLabel("Dia");
+		lblNewLabel_4.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_4.setBounds(20, 128, 49, 14);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_3 = new JLabel("Fecha de comienzo");
+		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_3.setBounds(20, 103, 113, 14);
 		contentPane.add(lblNewLabel_3);
 		
 		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectMes = comboBox_1.getSelectedItem().toString();
@@ -160,23 +171,28 @@ public class frmIngresarActualizarReserva extends JFrame {
 		contentPane.add(comboBox_1);
 		
 		JLabel lblNewLabel_5 = new JLabel("Mes");
+		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_5.setBounds(136, 128, 49, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		textYear = new JTextField();
+		textYear.setFont(new Font("Arial", Font.BOLD, 12));
 		textYear.setColumns(10);
 		textYear.setBounds(232, 153, 96, 20);
 		contentPane.add(textYear);
 		
 		JLabel lblNewLabel_6 = new JLabel("Año");
+		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_6.setBounds(227, 128, 49, 14);
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Número de días");
+		lblNewLabel_2_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_2_1.setBounds(292, 36, 102, 14);
 		contentPane.add(lblNewLabel_2_1);
 		
 		textNumeroDias = new JTextField();
+		textNumeroDias.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroDias.setColumns(10);
 		textNumeroDias.setBounds(292, 61, 96, 20);
 		contentPane.add(textNumeroDias);

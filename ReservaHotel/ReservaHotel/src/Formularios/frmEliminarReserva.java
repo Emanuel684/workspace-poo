@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class frmEliminarReserva extends JFrame {
 
@@ -42,7 +43,7 @@ public class frmEliminarReserva extends JFrame {
 	 */
 	public frmEliminarReserva() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -50,28 +51,34 @@ public class frmEliminarReserva extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Eliminar reserva");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel.setBounds(161, 11, 80, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Número de la reserva");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(71, 56, 119, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		textNumeroReserva = new JTextField();
+		textNumeroReserva.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroReserva.setBounds(71, 81, 96, 20);
 		contentPane.add(textNumeroReserva);
 		textNumeroReserva.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Cédula del cliente");
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(230, 56, 102, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		textCedulaCliente = new JTextField();
+		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textCedulaCliente.setBounds(224, 81, 96, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Eliminar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RESERVACION eliminarReservacion = new RESERVACION();
@@ -91,6 +98,7 @@ public class frmEliminarReserva extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Imprimir");
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RESERVACION imprimirReserva = new RESERVACION();
@@ -109,6 +117,7 @@ public class frmEliminarReserva extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Cancelar");
+		btnNewButton_2.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Navegamos al menu

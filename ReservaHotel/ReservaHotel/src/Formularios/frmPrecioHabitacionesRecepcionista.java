@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class frmPrecioHabitacionesRecepcionista extends JFrame {
 
@@ -45,7 +46,7 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 	 */
 	public frmPrecioHabitacionesRecepcionista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -53,6 +54,7 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Regresar");
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
@@ -66,6 +68,7 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectTipoHabitacion = comboBox.getSelectedItem().toString();
@@ -76,24 +79,29 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 		contentPane.add(comboBox);
 		
 		JLabel lblHabitacionesSencillas = new JLabel("Tipo de habitación");
+		lblHabitacionesSencillas.setFont(new Font("Arial", Font.BOLD, 12));
 		lblHabitacionesSencillas.setBounds(39, 86, 120, 14);
 		contentPane.add(lblHabitacionesSencillas);
 		
 		textPrecioActualHabitacion = new JTextField();
+		textPrecioActualHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		textPrecioActualHabitacion.setEnabled(false);
 		textPrecioActualHabitacion.setColumns(10);
 		textPrecioActualHabitacion.setBounds(249, 105, 96, 20);
 		contentPane.add(textPrecioActualHabitacion);
 		
 		JLabel lblPrecioActual = new JLabel("Precio actual");
+		lblPrecioActual.setFont(new Font("Arial", Font.BOLD, 12));
 		lblPrecioActual.setBounds(249, 86, 120, 14);
 		contentPane.add(lblPrecioActual);
 		
 		JLabel lblNewLabel = new JLabel("Precio habitacion");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel.setBounds(169, 27, 112, 14);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnConsultarPrecio = new JButton("Consultar");
+		btnConsultarPrecio.setFont(new Font("Arial", Font.BOLD, 12));
 		btnConsultarPrecio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(selectTipoHabitacion == "Habitaciones sencilla") {

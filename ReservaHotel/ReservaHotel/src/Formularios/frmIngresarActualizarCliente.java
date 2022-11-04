@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class frmIngresarActualizarCliente extends JFrame {
 
@@ -49,7 +50,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 	 */
 	public frmIngresarActualizarCliente(boolean actualizar_view) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -57,49 +58,60 @@ public class frmIngresarActualizarCliente extends JFrame {
 		contentPane.setLayout(null);
 		
 		txtCedulaCliente = new JTextField();
+		txtCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		txtCedulaCliente.setBounds(212, 8, 145, 20);
 		contentPane.add(txtCedulaCliente);
 		txtCedulaCliente.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Cédula cliente");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel.setBounds(20, 11, 113, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre completo");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(20, 36, 113, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		textNombreCompleto = new JTextField();
+		textNombreCompleto.setFont(new Font("Arial", Font.BOLD, 12));
 		textNombreCompleto.setBounds(212, 33, 145, 20);
 		contentPane.add(textNombreCompleto);
 		textNombreCompleto.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email");
+		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(20, 59, 49, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		textEmail = new JTextField();
+		textEmail.setFont(new Font("Arial", Font.BOLD, 12));
 		textEmail.setBounds(212, 56, 145, 20);
 		contentPane.add(textEmail);
 		textEmail.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("Fecha de nacimiento");
+		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_3.setBounds(20, 84, 113, 14);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Dia");
+		lblNewLabel_4.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_4.setBounds(20, 109, 49, 14);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Mes");
+		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_5.setBounds(136, 109, 49, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("Año");
+		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNewLabel_6.setBounds(237, 109, 49, 14);
 		contentPane.add(lblNewLabel_6);
 		
 		textYear = new JTextField();
+		textYear.setFont(new Font("Arial", Font.BOLD, 12));
 		textYear.setBounds(232, 134, 96, 20);
 		contentPane.add(textYear);
 		textYear.setColumns(10);
@@ -143,6 +155,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 		}
 		
 		JButton btnNewButton_1 = new JButton("Cancelar");
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frame = new frmMenu();
@@ -155,6 +168,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectDia = comboBox.getSelectedItem().toString();
@@ -165,6 +179,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 		contentPane.add(comboBox);
 		
 		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectMes = comboBox_1.getSelectedItem().toString();
