@@ -27,7 +27,6 @@ public class frmIngresarActualizarReserva extends JFrame {
 	private JTextField textNumeroDias;
 	private String selectDia = "";
 	private String selectMes = "";
-	private String tipoHabitacion = "";
 
 	/**
 	 * Launch the application.
@@ -123,7 +122,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					// Creamos la nueva reserva
 					RESERVACION nuevaReserva = new RESERVACION();
-					nuevaReserva.IngresarReservacion(selectDia + "/" + selectMes + "/" + textYear.getText(), textNumeroDias.getText(), textCedulaCliente.getText(), textNumeroHabitacion.getText(), tipoHabitacion);
+					nuevaReserva.IngresarReservacion(selectDia + "/" + selectMes + "/" + textYear.getText(), textNumeroDias.getText(), textCedulaCliente.getText(), textNumeroHabitacion.getText());
 					
 					// Navegamos al menu
 					JOptionPane.showMessageDialog(null,"Reserva creada correctamente.");
@@ -197,22 +196,6 @@ public class frmIngresarActualizarReserva extends JFrame {
 		textNumeroDias.setColumns(10);
 		textNumeroDias.setBounds(325, 61, 96, 20);
 		contentPane.add(textNumeroDias);
-		
-		JComboBox comboBoxTipoHabitacion = new JComboBox();
-		comboBoxTipoHabitacion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				tipoHabitacion = comboBoxTipoHabitacion.getSelectedItem().toString();
-			}
-		});
-		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBoxTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
-		comboBoxTipoHabitacion.setBounds(455, 54, 164, 22);
-		contentPane.add(comboBoxTipoHabitacion);
-		
-		JLabel lblHabitacionesSencillas = new JLabel("Tipo de habitación");
-		lblHabitacionesSencillas.setFont(new Font("Arial", Font.BOLD, 12));
-		lblHabitacionesSencillas.setBounds(455, 36, 120, 14);
-		contentPane.add(lblHabitacionesSencillas);
 		
 		
 	}

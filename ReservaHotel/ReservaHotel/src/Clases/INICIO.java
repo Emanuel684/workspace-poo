@@ -22,21 +22,18 @@ public class INICIO {
 		// Inicializamos los array en ""
 		for (int i = 0; i < datosReservas.length; ++i) {
             for(int j = 0; j < datosReservas[i].length; ++j) {
-                System.out.println(datosReservas[i][j]);
                 datosReservas[i][j] = "";
             }
         }
 		
 		for (int i = 0; i < datosClientes.length; ++i) {
             for(int j = 0; j < datosClientes[i].length; ++j) {
-                System.out.println(datosClientes[i][j]);
                 datosClientes[i][j] = "";
             }
         }
 		
 		for (int i = 0; i < datosClientesHabituales.length; ++i) {
             for(int j = 0; j < datosClientesHabituales[i].length; ++j) {
-                System.out.println(datosClientesHabituales[i][j]);
                 datosClientesHabituales[i][j] = "";
             }
         }

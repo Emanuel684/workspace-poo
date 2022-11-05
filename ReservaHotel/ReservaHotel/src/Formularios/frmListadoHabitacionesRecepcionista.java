@@ -76,6 +76,7 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
+		table.setEnabled(false);
 		table.setFont(new Font("Arial", Font.BOLD, 12));
 		scrollPane.setViewportView(table);
 		table.setSurrendersFocusOnKeystroke(true);
@@ -86,13 +87,13 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		table.setToolTipText("");
 		table.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		table.setModel(new DefaultTableModel(
-			new HABITACION().HabitacionesDisponibles(),
+				new HABITACION().HabitacionesDisponibles(),
 			new String[] {
-				"N\u00FAmero habitacion", "Tipo habitacion", "Disponible"
+				"N\u00FAmero habitacion", "Tipo habitacion", "Disponible", "N\u00FAmero reserva"
 			}
 		) {
 			Class[] columnTypes = new Class[] {
-				Object.class, Object.class, String.class
+				Object.class, Object.class, String.class, Object.class
 			};
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
