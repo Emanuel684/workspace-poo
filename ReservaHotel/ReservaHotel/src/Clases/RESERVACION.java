@@ -22,37 +22,82 @@ public class RESERVACION {
 		System.out.println("cantidadDias " + cantidadDias);
 		System.out.println("cedulaCliente " + cedulaCliente);
 		System.out.println("numeroHabitacion " + numeroHabitacion);
+		
+		HABITUAL descuentoCliente = new HABITUAL();
+		String descuento = descuentoCliente.DescuentoCliente(cedulaCliente);
+		
+		//System.out.println("Descuento: " + descuento.split("%")[0]);
 
 		// Hacemos la reservacion
+		
 		for (int i = 0; i < INICIO.datosClientes.length; i++) {
+			
 			if (INICIO.datosClientes[i][0].equals(cedulaCliente)) {
-				System.out.println("Inicio.datosHotel[0][0]" + INICIO.datosClientes[i][0]);
-				System.out.println("Inicio.datosHotel[0][1]" + INICIO.datosClientes[i][1]);
-				System.out.println("Inicio.datosHotel[0][2]" + INICIO.datosClientes[i][2]);
-				System.out.println("Inicio.datosHotel[0][3]" + INICIO.datosClientes[i][3]);
+				
 				for (int j = 0; j < INICIO.datosReservas.length; i++) {
-					if (INICIO.datosReservas[j][3] == null) {
-						System.out.println("fechaInicio()" + INICIO.datosReservas[j][0]);
-						System.out.println("cantidadDias()" + INICIO.datosReservas[j][1]);
-						System.out.println("cedulaCliente()" + INICIO.datosReservas[j][2]);
-						System.out.println("numeroHabitacion()" + INICIO.datosReservas[j][3]);
+					
+					if (INICIO.datosReservas[j][3] == "") {
+						
 						INICIO.datosReservas[j][0] = fechaInicio;
 						INICIO.datosReservas[j][1] = cantidadDias;
 						INICIO.datosReservas[j][2] = cedulaCliente;
 						INICIO.datosReservas[j][3] = numeroHabitacion;
 						INICIO.datosReservas[j][4] = String.valueOf(i);
-						if(tipoHabitacion == "Habitaciones sencilla") {
-							INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadDias));
-						} else if (tipoHabitacion == "Habitaciones doble") {
-							INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias));
-						} else {
-							INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadDias));
+						
+						for(int k = 0; k < HABITACION.habitaciones.length; k++) {
+							
+							System.out.println("ID_HABITACION: " + HABITACION.habitaciones[k][0]);
+							
+							if(HABITACION.habitaciones[k][0].equals(numeroHabitacion)) {
+								
+								if(HABITACION.habitaciones[k][1].equals("Sencilla")) {
+									
+									float cantidadDescuentoTotal = (Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias) * Integer.parseInt(descuento.split("%")[0])) / 100;
+									
+									System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
+									
+									INICIO.datosReservas[j][4] = String.valueOf((Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadDias)) - cantidadDescuentoTotal);
+									
+									// Cambiamos el estado de disponibilidad de la habitacion
+									HABITACION reservarHabitacion = new HABITACION();
+									reservarHabitacion.ReservarHabitacion(numeroHabitacion, "Sencilla", false);
+											
+									// INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadDias));
+									
+								} else if (HABITACION.habitaciones[k][1].equals("Doble")) {
+									
+									float cantidadDescuentoTotal = (Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias) * Integer.parseInt(descuento.split("%")[0])) / 100;
+									
+									System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
+									
+									INICIO.datosReservas[j][4] = String.valueOf((Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias)) - cantidadDescuentoTotal);
+									
+									// Cambiamos el estado de disponibilidad de la habitacion
+									
+									HABITACION reservarHabitacion = new HABITACION();
+									
+									reservarHabitacion.ReservarHabitacion(numeroHabitacion, "Doble", false);
+									
+									// INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias));
+									
+								} else {
+									
+									float cantidadDescuentoTotal = (Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadDias) * Integer.parseInt(descuento.split("%")[0])) / 100;
+									
+									System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
+									
+									INICIO.datosReservas[j][4] = String.valueOf((Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadDias)) - cantidadDescuentoTotal);
+									
+									// Cambiamos el estado de disponibilidad de la habitacion
+									
+									HABITACION reservarHabitacion = new HABITACION();
+									
+									reservarHabitacion.ReservarHabitacion(numeroHabitacion, "Matrimonial", false);
+								}
+								break;
+							}
+							
 						}
-						INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadDias));
-						System.out.println("fechaInicio()" + INICIO.datosReservas[j][0]);
-						System.out.println("cantidadDias()" + INICIO.datosReservas[j][1]);
-						System.out.println("cedulaCliente()" + INICIO.datosReservas[j][2]);
-						System.out.println("numeroHabitacion()" + INICIO.datosReservas[j][3]);
 						break;
 					}
 
@@ -103,10 +148,10 @@ public class RESERVACION {
 				System.out.println("INICIO.datosReservas[i][2](): " + INICIO.datosReservas[i][2]);
 				System.out.println("INICIO.datosReservas[i][3](): " + INICIO.datosReservas[i][3]);
 				
-				INICIO.datosReservas[i][0] = null;
-				INICIO.datosReservas[i][1] = null;
-				INICIO.datosReservas[i][2] = null;
-				INICIO.datosReservas[i][3] = null;
+				INICIO.datosReservas[i][0] = "";
+				INICIO.datosReservas[i][1] = "";
+				INICIO.datosReservas[i][2] = "";
+				INICIO.datosReservas[i][3] = "";
 				break;
 			}
 
@@ -138,12 +183,35 @@ public class RESERVACION {
 		System.out.println("cantidadNoches " + cantidadNoches);
 		System.out.println(Integer.parseInt("500000") * 2);
 		String precioTotal = "0";
+		
+		HABITUAL descuentoCliente = new HABITUAL();
+		String descuento = descuentoCliente.DescuentoCliente(cedulaCliente);
+		System.out.println("Descuento: " + descuento.split("%")[0]);
+		
 		if(tipoHabitacion == "Habitaciones sencilla") {
-			precioTotal = String.valueOf(Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadNoches));
+			
+			float cantidadDescuentoTotal = (Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadNoches) * Integer.parseInt(descuento.split("%")[0])) / 100;
+			
+			System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
+			
+			precioTotal = String.valueOf((Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadNoches)) - cantidadDescuentoTotal);
+			
 		} else if (tipoHabitacion == "Habitaciones doble") {
-			precioTotal = String.valueOf(Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadNoches));
+			
+			float cantidadDescuentoTotal = (Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadNoches) * Integer.parseInt(descuento.split("%")[0])) / 100;
+			
+			System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
+			
+			precioTotal = String.valueOf((Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadNoches)) - cantidadDescuentoTotal);
+			
 		} else {
-			precioTotal = String.valueOf(Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadNoches));
+			
+			float cantidadDescuentoTotal = (Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadNoches) * Integer.parseInt(descuento.split("%")[0])) / 100;
+			
+			System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
+			
+			precioTotal = String.valueOf((Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadNoches)) - cantidadDescuentoTotal);
+			
 		}
 		return precioTotal + "$";
 	}

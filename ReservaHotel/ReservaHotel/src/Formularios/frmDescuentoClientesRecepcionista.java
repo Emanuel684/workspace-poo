@@ -71,7 +71,7 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 				HABITUAL descuentoCliente = new HABITUAL();
 				String descuento = descuentoCliente.DescuentoCliente(textCedulaCliente.getText());
 				
-				if(descuento != "0%") {
+				if(descuento != "0") {
 					JOptionPane.showMessageDialog(null,"Se encontro el cliente");
 					textDescuentoCliente.setText(descuento);
 				} else {

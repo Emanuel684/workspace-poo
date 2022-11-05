@@ -74,7 +74,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textCedulaCliente.setColumns(10);
-		textCedulaCliente.setBounds(155, 61, 108, 20);
+		textCedulaCliente.setBounds(171, 61, 108, 20);
 		contentPane.add(textCedulaCliente);
 		
 		textNumeroHabitacion = new JTextField();
@@ -85,17 +85,17 @@ public class frmIngresarActualizarReserva extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("Número habitacion");
 		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(20, 36, 108, 14);
+		lblNewLabel_1.setBounds(20, 36, 141, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Cédula del cliente");
 		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_2.setBounds(155, 36, 102, 14);
+		lblNewLabel_2.setBounds(171, 36, 141, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblCrearReserva = new JLabel("Crear reserva");
 		lblCrearReserva.setFont(new Font("Arial", Font.BOLD, 12));
-		lblCrearReserva.setBounds(178, 11, 141, 14);
+		lblCrearReserva.setBounds(341, 11, 141, 14);
 		contentPane.add(lblCrearReserva);
 		
 		if(actualizar_view) {
@@ -189,13 +189,13 @@ public class frmIngresarActualizarReserva extends JFrame {
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Número de días");
 		lblNewLabel_2_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_2_1.setBounds(292, 36, 102, 14);
+		lblNewLabel_2_1.setBounds(325, 36, 102, 14);
 		contentPane.add(lblNewLabel_2_1);
 		
 		textNumeroDias = new JTextField();
 		textNumeroDias.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroDias.setColumns(10);
-		textNumeroDias.setBounds(292, 61, 96, 20);
+		textNumeroDias.setBounds(325, 61, 96, 20);
 		contentPane.add(textNumeroDias);
 		
 		JComboBox comboBoxTipoHabitacion = new JComboBox();
@@ -206,12 +206,12 @@ public class frmIngresarActualizarReserva extends JFrame {
 		});
 		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
 		comboBoxTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
-		comboBoxTipoHabitacion.setBounds(20, 270, 164, 22);
+		comboBoxTipoHabitacion.setBounds(455, 54, 164, 22);
 		contentPane.add(comboBoxTipoHabitacion);
 		
 		JLabel lblHabitacionesSencillas = new JLabel("Tipo de habitación");
 		lblHabitacionesSencillas.setFont(new Font("Arial", Font.BOLD, 12));
-		lblHabitacionesSencillas.setBounds(20, 252, 120, 14);
+		lblHabitacionesSencillas.setBounds(455, 36, 120, 14);
 		contentPane.add(lblHabitacionesSencillas);
 		
 		
