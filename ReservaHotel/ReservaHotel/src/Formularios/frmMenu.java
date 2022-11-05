@@ -13,6 +13,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class frmMenu extends JFrame {
 
@@ -38,6 +40,11 @@ public class frmMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public frmMenu() {
+		setResizable(false);
+		setTitle("Hotel Gestor");
+		setFont(new Font("Arial", Font.BOLD, 12));
+		setForeground(new Color(255, 255, 255));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(frmMenu.class.getResource("/Imagenes/cliente.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		

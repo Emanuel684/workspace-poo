@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Clases.HOTEL;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -13,6 +16,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class frmCalcularGananciasAdministrador extends JFrame {
 
@@ -45,6 +50,11 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 	 * Create the frame.
 	 */
 	public frmCalcularGananciasAdministrador() {
+		setForeground(new Color(255, 255, 255));
+		setFont(new Font("Arial", Font.BOLD, 12));
+		setTitle("Hotel Gestor");
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(frmCalcularGananciasAdministrador.class.getResource("/Imagenes/cliente.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
@@ -92,6 +102,10 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				HOTEL calcularGananciasHotel = new HOTEL();
+				
+				calcularGananciasHotel.CalcularGanancias(selectDiaInicio, selectMesInicio, textYearInicio.getText(), selectDiaFinal, selectMesFinal, textYearFinal.getText());
+				
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
 				

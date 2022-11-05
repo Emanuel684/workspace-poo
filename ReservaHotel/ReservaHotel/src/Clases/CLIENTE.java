@@ -17,7 +17,6 @@ public class CLIENTE {
 
 	public void CrearCliente(String cedulaCliente, String nombreCliente, String emailCliente,
 			String fechaNacimientoCliente) {
-		System.out.println("CrearCliente()");
 
 		for (int i = 0; i < INICIO.datosClientes.length; i++) {
 			if (INICIO.datosClientes[i][0] == "") {
@@ -34,7 +33,6 @@ public class CLIENTE {
 
 	public void ActualizarCliente(String cedulaCliente, String nombreCliente, String emailCliente,
 			String fechaNacimientoCliente) {
-		System.out.println("ActualizarCliente()");
 
 		for (int i = 0; i < INICIO.datosClientes.length; i++) {
 			if (INICIO.datosClientes[i][0].equals(cedulaCliente)) {
@@ -50,7 +48,6 @@ public class CLIENTE {
 	}
 
 	public void EliminarCliente(String cedulaCliente) {
-		System.out.println("EliminarCliente()");
 
 		for (int i = 0; i < INICIO.datosClientes.length; i++) {
 			if (INICIO.datosClientes[i][0].equals(cedulaCliente)) {

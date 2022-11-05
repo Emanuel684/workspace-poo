@@ -18,6 +18,8 @@ import javax.swing.border.BevelBorder;
 import javax.swing.ListSelectionModel;
 import javax.swing.JScrollPane;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class frmListadoHabitacionesRecepcionista extends JFrame {
 
@@ -44,6 +46,11 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 	 * Create the frame.
 	 */
 	public frmListadoHabitacionesRecepcionista() {
+		setForeground(new Color(255, 255, 255));
+		setFont(new Font("Arial", Font.BOLD, 12));
+		setTitle("Hotel Gestor");
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(frmListadoHabitacionesRecepcionista.class.getResource("/Imagenes/cliente.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();

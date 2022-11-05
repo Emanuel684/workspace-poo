@@ -17,6 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class frmIngresarActualizarReserva extends JFrame {
 
@@ -48,6 +50,9 @@ public class frmIngresarActualizarReserva extends JFrame {
 	 * Create the frame.
 	 */
 	public frmIngresarActualizarReserva(boolean actualizar_view) {
+		setForeground(new Color(255, 255, 255));
+		setFont(new Font("Arial", Font.BOLD, 12));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(frmIngresarActualizarReserva.class.getResource("/Imagenes/cliente.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();

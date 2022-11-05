@@ -10,22 +10,12 @@ public class MATRIMONIAL extends HABITACION {
 		this.Foto = "";
 	}
 
-	public void MostrarFoto() {
-		System.out.println("MostrarFoto()");
-	}
-
 	public String MostrarPrecioMatrimonial() {
-		System.out.println("MostrarPrecio()");
 		return this.Precio + "$";
 	}
 
 	public void CambiarPrecio(String nuevoPrecio) {
 		this.Precio = nuevoPrecio;
-		System.out.println("CambiarPrecio() " + nuevoPrecio);
-	}
-
-	public void Clonar() {
-		System.out.println("Clonar()");
 	}
 
 }

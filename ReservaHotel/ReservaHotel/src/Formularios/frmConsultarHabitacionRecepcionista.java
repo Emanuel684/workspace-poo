@@ -14,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class frmConsultarHabitacionRecepcionista extends JFrame {
 
@@ -40,6 +42,11 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 	 * Create the frame.
 	 */
 	public frmConsultarHabitacionRecepcionista() {
+		setForeground(new Color(255, 255, 255));
+		setFont(new Font("Arial", Font.BOLD, 12));
+		setTitle("Hotel Gestor");
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(frmConsultarHabitacionRecepcionista.class.getResource("/Imagenes/cliente.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();

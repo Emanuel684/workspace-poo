@@ -17,8 +17,6 @@ public class RESERVACION {
 
 	public void IngresarReservacion(String fechaInicio, String cantidadDias, String cedulaCliente,
 			String numeroHabitacion) {
-		System.out.println("Reservar()");
-
 		// Hacemos la reservacion
 		
 		for (int i = 0; i < INICIO.datosClientes.length; i++) {
@@ -53,7 +51,6 @@ public class RESERVACION {
 
 	public void ActualizarReservacion(String fechaInicio, String cantidadDias, String cedulaCliente,
 			String numeroHabitacion) {
-		System.out.println("Actualizar()");
 
 		// Hacemos la reservacion
 		
@@ -63,7 +60,7 @@ public class RESERVACION {
 				
 				for (int j = 0; j < INICIO.datosReservas.length; j++) {
 					
-					if (INICIO.datosReservas[j][4].equals("")) {
+					if (INICIO.datosReservas[j][3].equals(numeroHabitacion) && INICIO.datosReservas[j][2].equals(cedulaCliente)) {
 						
 						INICIO.datosReservas[j][0] = fechaInicio;
 						INICIO.datosReservas[j][1] = cantidadDias;
@@ -86,7 +83,6 @@ public class RESERVACION {
 	}
 
 	public void EliminarReserva(String numeroReserva, String cedulaCliente) {
-		System.out.println("Eliminar()");
 
 		// Hacemos la reservacion
 		
@@ -149,9 +145,6 @@ public class RESERVACION {
 	}
 
 	public void ImprimirReserva(String numeroReserva, String cedulaCliente) {
-		System.out.println("Imprimir()");
-		System.out.println("numeroReserva " + numeroReserva);
-		System.out.println("cedulaCliente " + cedulaCliente);
 		// Hacemos la reservacion
 
 		for (int i = 0; i < INICIO.datosReservas.length; i++) {
@@ -169,7 +162,6 @@ public class RESERVACION {
 	}
 
 	public String EstimarReservacion(String tipoHabitacion, String cedulaCliente, String cantidadNoches) {
-		System.out.println("EstimarReservacion()");
 		String precioTotal = "0";
 		
 		HABITUAL descuentoCliente = new HABITUAL();

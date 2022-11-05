@@ -13,6 +13,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import Clases.CLIENTE;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class frmEliminarCliente extends JFrame {
 
@@ -39,6 +41,11 @@ public class frmEliminarCliente extends JFrame {
 	 * Create the frame.
 	 */
 	public frmEliminarCliente() {
+		setForeground(new Color(255, 255, 255));
+		setFont(new Font("Arial", Font.BOLD, 12));
+		setTitle("Hotel Gestor");
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(frmEliminarCliente.class.getResource("/Imagenes/cliente.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
