@@ -54,14 +54,15 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Regresar");
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
@@ -70,11 +71,11 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(377, 479, 89, 23);
-		contentPane.add(btnNewButton);
+		btnRegresar.setBounds(377, 479, 89, 23);
+		contentPane.add(btnRegresar);
 		
 		JLabel lblNewLabel = new JLabel("Consultar habitaciones");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
 		lblNewLabel.setBounds(346, 25, 160, 14);
 		contentPane.add(lblNewLabel);
 		

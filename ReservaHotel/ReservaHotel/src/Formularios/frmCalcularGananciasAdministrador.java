@@ -22,7 +22,7 @@ import java.awt.Color;
 public class frmCalcularGananciasAdministrador extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textCalcularGanacias;
+	private JTextField textCalcularGanancias;
 	private JTextField textYearInicio;
 	private JTextField textYearFinal;
 	private String selectDiaInicio;
@@ -58,44 +58,45 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Calcular ganancias");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(155, 11, 130, 14);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
+		lblNewLabel.setBounds(266, 11, 235, 49);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_4 = new JLabel("Dia");
-		lblNewLabel_4.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_4.setBounds(49, 36, 49, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblDiaInicio = new JLabel("Dia inicio");
+		lblDiaInicio.setFont(new Font("Arial", Font.BOLD, 12));
+		lblDiaInicio.setBounds(225, 124, 49, 14);
+		contentPane.add(lblDiaInicio);
 		
-		JLabel lblNewLabel_5 = new JLabel("Mes");
+		JLabel lblNewLabel_5 = new JLabel("Mes inicio");
 		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_5.setBounds(165, 36, 49, 14);
+		lblNewLabel_5.setBounds(341, 124, 49, 14);
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("Año");
+		JLabel lblNewLabel_6 = new JLabel("Año inicio");
 		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_6.setBounds(266, 36, 49, 14);
+		lblNewLabel_6.setBounds(442, 124, 49, 14);
 		contentPane.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_4_1 = new JLabel("Dia");
+		JLabel lblNewLabel_4_1 = new JLabel("Dia fin");
 		lblNewLabel_4_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_4_1.setBounds(49, 114, 49, 14);
+		lblNewLabel_4_1.setBounds(225, 202, 49, 14);
 		contentPane.add(lblNewLabel_4_1);
 		
-		JLabel lblNewLabel_5_1 = new JLabel("Mes");
+		JLabel lblNewLabel_5_1 = new JLabel("Mes fin");
 		lblNewLabel_5_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_5_1.setBounds(165, 114, 49, 14);
+		lblNewLabel_5_1.setBounds(341, 202, 49, 14);
 		contentPane.add(lblNewLabel_5_1);
 		
-		JLabel lblNewLabel_6_1 = new JLabel("Año");
+		JLabel lblNewLabel_6_1 = new JLabel("Año fin");
 		lblNewLabel_6_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_6_1.setBounds(266, 114, 49, 14);
+		lblNewLabel_6_1.setBounds(442, 202, 49, 14);
 		contentPane.add(lblNewLabel_6_1);
 		
 		JButton btnNewButton = new JButton("Calcular");
@@ -104,16 +105,12 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				HOTEL calcularGananciasHotel = new HOTEL();
 				
-				calcularGananciasHotel.CalcularGanancias(selectDiaInicio, selectMesInicio, textYearInicio.getText(), selectDiaFinal, selectMesFinal, textYearFinal.getText());
+				String gananciasTotales = calcularGananciasHotel.CalcularGanancias(selectDiaInicio, selectMesInicio, textYearInicio.getText(), selectDiaFinal, selectMesFinal, textYearFinal.getText());
 				
-				frmMenu frmMenu = new frmMenu();
-				frmMenu.setVisible(true);
-				
-				// Cerramos la ventana actual
-				setVisible(false);
+				textCalcularGanancias.setText(gananciasTotales);
 			}
 		});
-		btnNewButton.setBounds(96, 229, 89, 23);
+		btnNewButton.setBounds(266, 456, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Regresar");
@@ -127,20 +124,20 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_1.setBounds(213, 229, 89, 23);
+		btnNewButton_1.setBounds(383, 456, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("Las ganancias son:");
 		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(49, 184, 133, 14);
+		lblNewLabel_1.setBounds(225, 272, 133, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		textCalcularGanacias = new JTextField();
-		textCalcularGanacias.setFont(new Font("Arial", Font.BOLD, 12));
-		textCalcularGanacias.setEnabled(false);
-		textCalcularGanacias.setBounds(206, 181, 96, 20);
-		contentPane.add(textCalcularGanacias);
-		textCalcularGanacias.setColumns(10);
+		textCalcularGanancias = new JTextField();
+		textCalcularGanancias.setFont(new Font("Arial", Font.BOLD, 12));
+		textCalcularGanancias.setEnabled(false);
+		textCalcularGanancias.setBounds(382, 269, 96, 20);
+		contentPane.add(textCalcularGanancias);
+		textCalcularGanancias.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
@@ -151,7 +148,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		});
 		comboBox.setToolTipText("Día");
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
-		comboBox.setBounds(49, 61, 89, 22);
+		comboBox.setBounds(225, 149, 89, 22);
 		contentPane.add(comboBox);
 		
 		JComboBox comboBox_1 = new JComboBox();
@@ -163,12 +160,12 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		});
 		comboBox_1.setToolTipText("Mes");
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}));
-		comboBox_1.setBounds(154, 61, 90, 22);
+		comboBox_1.setBounds(330, 149, 90, 22);
 		contentPane.add(comboBox_1);
 		
 		textYearInicio = new JTextField();
 		textYearInicio.setFont(new Font("Arial", Font.BOLD, 12));
-		textYearInicio.setBounds(259, 62, 96, 20);
+		textYearInicio.setBounds(435, 150, 96, 20);
 		contentPane.add(textYearInicio);
 		textYearInicio.setColumns(10);
 		
@@ -181,7 +178,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		});
 		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
 		comboBox_2.setToolTipText("Día");
-		comboBox_2.setBounds(49, 139, 89, 22);
+		comboBox_2.setBounds(225, 227, 89, 22);
 		contentPane.add(comboBox_2);
 		
 		JComboBox comboBox_1_1 = new JComboBox();
@@ -193,13 +190,13 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		});
 		comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}));
 		comboBox_1_1.setToolTipText("Mes");
-		comboBox_1_1.setBounds(154, 139, 90, 22);
+		comboBox_1_1.setBounds(330, 227, 90, 22);
 		contentPane.add(comboBox_1_1);
 		
 		textYearFinal = new JTextField();
 		textYearFinal.setFont(new Font("Arial", Font.BOLD, 12));
 		textYearFinal.setColumns(10);
-		textYearFinal.setBounds(254, 139, 96, 20);
+		textYearFinal.setBounds(430, 227, 96, 20);
 		contentPane.add(textYearFinal);
 	}
 }

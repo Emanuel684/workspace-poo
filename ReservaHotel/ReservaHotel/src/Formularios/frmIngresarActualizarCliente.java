@@ -59,6 +59,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -70,15 +71,15 @@ public class frmIngresarActualizarCliente extends JFrame {
 		contentPane.add(txtCedulaCliente);
 		txtCedulaCliente.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Cédula cliente");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(20, 11, 113, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblCedulaCliente = new JLabel("Cédula cliente");
+		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		lblCedulaCliente.setBounds(20, 11, 113, 14);
+		contentPane.add(lblCedulaCliente);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nombre completo");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(20, 36, 113, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblNombreCompleto = new JLabel("Nombre completo");
+		lblNombreCompleto.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNombreCompleto.setBounds(20, 36, 113, 14);
+		contentPane.add(lblNombreCompleto);
 		
 		textNombreCompleto = new JTextField();
 		textNombreCompleto.setFont(new Font("Arial", Font.BOLD, 12));
@@ -86,10 +87,10 @@ public class frmIngresarActualizarCliente extends JFrame {
 		contentPane.add(textNombreCompleto);
 		textNombreCompleto.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Email");
-		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_2.setBounds(20, 59, 49, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblEmail = new JLabel("Email");
+		lblEmail.setFont(new Font("Arial", Font.BOLD, 12));
+		lblEmail.setBounds(20, 59, 49, 14);
+		contentPane.add(lblEmail);
 		
 		textEmail = new JTextField();
 		textEmail.setFont(new Font("Arial", Font.BOLD, 12));
@@ -97,25 +98,25 @@ public class frmIngresarActualizarCliente extends JFrame {
 		contentPane.add(textEmail);
 		textEmail.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Fecha de nacimiento");
-		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_3.setBounds(20, 84, 113, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblFechaDeNacimiento = new JLabel("Fecha de nacimiento");
+		lblFechaDeNacimiento.setFont(new Font("Arial", Font.BOLD, 12));
+		lblFechaDeNacimiento.setBounds(20, 84, 113, 14);
+		contentPane.add(lblFechaDeNacimiento);
 		
-		JLabel lblNewLabel_4 = new JLabel("Dia");
-		lblNewLabel_4.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_4.setBounds(20, 109, 49, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblDia = new JLabel("Dia");
+		lblDia.setFont(new Font("Arial", Font.BOLD, 12));
+		lblDia.setBounds(20, 109, 49, 14);
+		contentPane.add(lblDia);
 		
-		JLabel lblNewLabel_5 = new JLabel("Mes");
-		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_5.setBounds(136, 109, 49, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblMes = new JLabel("Mes");
+		lblMes.setFont(new Font("Arial", Font.BOLD, 12));
+		lblMes.setBounds(136, 109, 49, 14);
+		contentPane.add(lblMes);
 		
-		JLabel lblNewLabel_6 = new JLabel("Año");
-		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_6.setBounds(237, 109, 49, 14);
-		contentPane.add(lblNewLabel_6);
+		JLabel lblYear = new JLabel("Año");
+		lblYear.setFont(new Font("Arial", Font.BOLD, 12));
+		lblYear.setBounds(237, 109, 49, 14);
+		contentPane.add(lblYear);
 		
 		textYear = new JTextField();
 		textYear.setFont(new Font("Arial", Font.BOLD, 12));
@@ -161,9 +162,9 @@ public class frmIngresarActualizarCliente extends JFrame {
 			contentPane.add(btnNewButton);
 		}
 		
-		JButton btnNewButton_1 = new JButton("Cancelar");
-		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frame = new frmMenu();
 				frame.setVisible(true);
@@ -171,29 +172,29 @@ public class frmIngresarActualizarCliente extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_1.setBounds(219, 213, 89, 23);
-		contentPane.add(btnNewButton_1);
+		btnCancelar.setBounds(219, 213, 89, 23);
+		contentPane.add(btnCancelar);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
-		comboBox.addActionListener(new ActionListener() {
+		JComboBox comboBoxDia = new JComboBox();
+		comboBoxDia.setFont(new Font("Arial", Font.BOLD, 12));
+		comboBoxDia.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				selectDia = comboBox.getSelectedItem().toString();
+				selectDia = comboBoxDia.getSelectedItem().toString();
 			}
 		});
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
-		comboBox.setBounds(20, 134, 77, 22);
-		contentPane.add(comboBox);
+		comboBoxDia.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
+		comboBoxDia.setBounds(20, 134, 77, 22);
+		contentPane.add(comboBoxDia);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setFont(new Font("Arial", Font.BOLD, 12));
-		comboBox_1.addActionListener(new ActionListener() {
+		JComboBox comboBoxMes = new JComboBox();
+		comboBoxMes.setFont(new Font("Arial", Font.BOLD, 12));
+		comboBoxMes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				selectMes = comboBox_1.getSelectedItem().toString();
+				selectMes = comboBoxMes.getSelectedItem().toString();
 			}
 		});
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}));
-		comboBox_1.setBounds(125, 133, 84, 22);
-		contentPane.add(comboBox_1);
+		comboBoxMes.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}));
+		comboBoxMes.setBounds(125, 133, 84, 22);
+		contentPane.add(comboBoxMes);
 	}
 }

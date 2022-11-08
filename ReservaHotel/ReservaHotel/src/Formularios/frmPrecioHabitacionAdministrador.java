@@ -57,14 +57,15 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Regresar");
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 11));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.setFont(new Font("Arial", Font.BOLD, 11));
+		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
@@ -73,22 +74,22 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(261, 214, 89, 23);
-		contentPane.add(btnNewButton);
+		btnRegresar.setBounds(261, 214, 89, 23);
+		contentPane.add(btnRegresar);
 		
-		JLabel lblHabitacionesSencillas = new JLabel("Tipo de habitación");
-		lblHabitacionesSencillas.setFont(new Font("Arial", Font.BOLD, 11));
-		lblHabitacionesSencillas.setBounds(36, 51, 120, 14);
-		contentPane.add(lblHabitacionesSencillas);
+		JLabel lblTipoDeHabitacion = new JLabel("Tipo de habitación");
+		lblTipoDeHabitacion.setFont(new Font("Arial", Font.BOLD, 11));
+		lblTipoDeHabitacion.setBounds(36, 51, 120, 14);
+		contentPane.add(lblTipoDeHabitacion);
 		
-		JLabel lblNewLabel = new JLabel("Precio habitacion");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 11));
-		lblNewLabel.setBounds(167, 11, 120, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("Precio habitacion");
+		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
+		lblTitulo.setBounds(167, 11, 120, 14);
+		contentPane.add(lblTitulo);
 		
-		JButton btnNewButton_1 = new JButton("Cambir precio");
-		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 11));
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnCambiarPrecio = new JButton("Cambir precio");
+		btnCambiarPrecio.setFont(new Font("Arial", Font.BOLD, 11));
+		btnCambiarPrecio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(selectTipoHabitacion == "Habitaciones sencilla") {
@@ -108,14 +109,14 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 				}
 			}
 		});
-		btnNewButton_1.setBounds(92, 214, 133, 23);
-		contentPane.add(btnNewButton_1);
+		btnCambiarPrecio.setBounds(92, 214, 133, 23);
+		contentPane.add(btnCambiarPrecio);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setFont(new Font("Arial", Font.BOLD, 11));
-		comboBox.addActionListener(new ActionListener() {
+		JComboBox comboBoxTipoHabitacion = new JComboBox();
+		comboBoxTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 11));
+		comboBoxTipoHabitacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				selectTipoHabitacion = comboBox.getSelectedItem().toString();
+				selectTipoHabitacion = comboBoxTipoHabitacion.getSelectedItem().toString();
 
 				if(selectTipoHabitacion == "Habitaciones sencilla") {
 					SIMPLE habitacionSimple = new SIMPLE();
@@ -130,9 +131,9 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 				
 			}
 		});
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBox.setBounds(36, 69, 164, 22);
-		contentPane.add(comboBox);
+		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
+		comboBoxTipoHabitacion.setBounds(36, 69, 164, 22);
+		contentPane.add(comboBoxTipoHabitacion);
 		
 		JLabel lblPrecioActual = new JLabel("Precio actual");
 		lblPrecioActual.setFont(new Font("Arial", Font.BOLD, 11));

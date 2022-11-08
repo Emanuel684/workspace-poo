@@ -13,10 +13,6 @@ public class INICIO {
 	public static String datosClientesHabituales[][] = new String [10][6];
 	public static String datosClientesEsporadicos[][] = new String [10][6];
 
-	public INICIO() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] ar) {
 		
 		// Inicializamos los array en ""

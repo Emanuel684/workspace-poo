@@ -55,6 +55,7 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -74,14 +75,14 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		btnNewButton.setBounds(10, 11, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JLabel lblNewLabel = new JLabel("Cédula cliente");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(83, 58, 83, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblCedulaCliente = new JLabel("Cédula cliente");
+		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		lblCedulaCliente.setBounds(83, 58, 83, 14);
+		contentPane.add(lblCedulaCliente);
 		
-		JButton btnNewButton_1 = new JButton("Precio estimado");
-		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnPrecioEstimado = new JButton("Precio estimado");
+		btnPrecioEstimado.setFont(new Font("Arial", Font.BOLD, 12));
+		btnPrecioEstimado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				RESERVACION estimarReservacion = new RESERVACION();
@@ -91,13 +92,13 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 				
 			}
 		});
-		btnNewButton_1.setBounds(147, 229, 139, 23);
-		contentPane.add(btnNewButton_1);
+		btnPrecioEstimado.setBounds(147, 229, 139, 23);
+		contentPane.add(btnPrecioEstimado);
 		
-		JLabel lblNewLabel_1 = new JLabel("El precio estimado es de:");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(52, 186, 166, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblPrecioEstimado = new JLabel("El precio estimado es de:");
+		lblPrecioEstimado.setFont(new Font("Arial", Font.BOLD, 12));
+		lblPrecioEstimado.setBounds(52, 186, 166, 14);
+		contentPane.add(lblPrecioEstimado);
 		
 		textCalculado = new JTextField();
 		textCalculado.setFont(new Font("Arial", Font.BOLD, 12));
@@ -112,15 +113,15 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Tipo habitación");
-		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_2.setBounds(83, 114, 105, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblTipoHabitacion = new JLabel("Tipo habitación");
+		lblTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
+		lblTipoHabitacion.setBounds(83, 114, 105, 14);
+		contentPane.add(lblTipoHabitacion);
 		
-		JLabel lblNewLabel_3 = new JLabel("Número de noches");
-		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_3.setBounds(242, 58, 126, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblNumeroDeNoches = new JLabel("Número de noches");
+		lblNumeroDeNoches.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNumeroDeNoches.setBounds(242, 58, 126, 14);
+		contentPane.add(lblNumeroDeNoches);
 		
 		textNumeroNoches = new JTextField();
 		textNumeroNoches.setFont(new Font("Arial", Font.BOLD, 12));
@@ -129,15 +130,15 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		contentPane.add(textNumeroNoches);
 		textNumeroNoches.setColumns(10);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
-		comboBox.addActionListener(new ActionListener() {
+		JComboBox comboBoxTipoHabitacion = new JComboBox();
+		comboBoxTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
+		comboBoxTipoHabitacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				selectTipoHabitacion = comboBox.getSelectedItem().toString();
+				selectTipoHabitacion = comboBoxTipoHabitacion.getSelectedItem().toString();
 			}
 		});
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBox.setBounds(83, 138, 166, 22);
-		contentPane.add(comboBox);
+		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
+		comboBoxTipoHabitacion.setBounds(83, 138, 166, 22);
+		contentPane.add(comboBoxTipoHabitacion);
 	}
 }

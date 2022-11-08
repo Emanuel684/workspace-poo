@@ -52,20 +52,21 @@ public class frmEliminarReserva extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Eliminar reserva");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(161, 11, 80, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("Eliminar reserva");
+		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
+		lblTitulo.setBounds(161, 11, 80, 14);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Número de la reserva");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(71, 56, 119, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblNumeroDeReserva = new JLabel("Número de la reserva");
+		lblNumeroDeReserva.setFont(new Font("Arial", Font.BOLD, 12));
+		lblNumeroDeReserva.setBounds(71, 56, 119, 14);
+		contentPane.add(lblNumeroDeReserva);
 		
 		textNumeroReserva = new JTextField();
 		textNumeroReserva.setFont(new Font("Arial", Font.BOLD, 12));
@@ -73,10 +74,10 @@ public class frmEliminarReserva extends JFrame {
 		contentPane.add(textNumeroReserva);
 		textNumeroReserva.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Cédula del cliente");
-		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_2.setBounds(230, 56, 102, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblCedulaDelCliente = new JLabel("Cédula del cliente");
+		lblCedulaDelCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		lblCedulaDelCliente.setBounds(230, 56, 102, 14);
+		contentPane.add(lblCedulaDelCliente);
 		
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
@@ -84,9 +85,9 @@ public class frmEliminarReserva extends JFrame {
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Eliminar");
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RESERVACION eliminarReservacion = new RESERVACION();
 				eliminarReservacion.EliminarReserva(textNumeroReserva.getText(), textCedulaCliente.getText());
@@ -101,12 +102,12 @@ public class frmEliminarReserva extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(41, 170, 89, 23);
-		contentPane.add(btnNewButton);
+		btnEliminar.setBounds(41, 170, 89, 23);
+		contentPane.add(btnEliminar);
 		
-		JButton btnNewButton_1 = new JButton("Imprimir");
-		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnImprimir = new JButton("Imprimir");
+		btnImprimir.setFont(new Font("Arial", Font.BOLD, 12));
+		btnImprimir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RESERVACION imprimirReserva = new RESERVACION();
 				imprimirReserva.ImprimirReserva(textNumeroReserva.getText(), textCedulaCliente.getText());
@@ -120,12 +121,12 @@ public class frmEliminarReserva extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_1.setBounds(156, 170, 89, 23);
-		contentPane.add(btnNewButton_1);
+		btnImprimir.setBounds(156, 170, 89, 23);
+		contentPane.add(btnImprimir);
 		
-		JButton btnNewButton_2 = new JButton("Cancelar");
-		btnNewButton_2.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Navegamos al menu
 				frmMenu frmMenu = new frmMenu();
@@ -135,8 +136,8 @@ public class frmEliminarReserva extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_2.setBounds(276, 170, 89, 23);
-		contentPane.add(btnNewButton_2);
+		btnCancelar.setBounds(276, 170, 89, 23);
+		contentPane.add(btnCancelar);
 	}
 
 }

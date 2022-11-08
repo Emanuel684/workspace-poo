@@ -8,7 +8,6 @@ public class RESERVACION {
 	String NumeroHabitaciones;
 
 	public RESERVACION() {
-		// TODO Auto-generated constructor stub
 		this.FechaInicio = "";
 		this.CantidadDias = "";
 		this.Cliente = "";

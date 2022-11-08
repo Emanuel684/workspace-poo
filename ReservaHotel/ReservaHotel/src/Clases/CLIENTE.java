@@ -8,7 +8,6 @@ public class CLIENTE {
 	String FechaNacimiento;
 
 	public CLIENTE() {
-		// TODO Auto-generated constructor stub
 		this.Cedula = "";
 		this.Nombre = "";
 		this.Email = "";

@@ -51,9 +51,9 @@ public class frmMenu extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Cliente");
-		mnNewMenu.setFont(new Font("Arial", Font.BOLD, 12));
-		menuBar.add(mnNewMenu);
+		JMenu mnCliente = new JMenu("Cliente");
+		mnCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		menuBar.add(mnCliente);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Ingresar");
 		mntmNewMenuItem.setFont(new Font("Arial", Font.BOLD, 12));
@@ -66,7 +66,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu.add(mntmNewMenuItem);
+		mnCliente.add(mntmNewMenuItem);
 		
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Actualizar");
 		mntmNewMenuItem_4.setFont(new Font("Arial", Font.BOLD, 12));
@@ -79,7 +79,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu.add(mntmNewMenuItem_4);
+		mnCliente.add(mntmNewMenuItem_4);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Eliminar");
 		mntmNewMenuItem_1.setFont(new Font("Arial", Font.BOLD, 12));
@@ -92,11 +92,11 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu.add(mntmNewMenuItem_1);
+		mnCliente.add(mntmNewMenuItem_1);
 		
-		JMenu mnNewMenu_1 = new JMenu("Reserva");
-		mnNewMenu_1.setFont(new Font("Arial", Font.BOLD, 12));
-		menuBar.add(mnNewMenu_1);
+		JMenu mnReserva = new JMenu("Reserva");
+		mnReserva.setFont(new Font("Arial", Font.BOLD, 12));
+		menuBar.add(mnReserva);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Crear");
 		mntmNewMenuItem_2.setFont(new Font("Arial", Font.BOLD, 12));
@@ -109,7 +109,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_1.add(mntmNewMenuItem_2);
+		mnReserva.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Actualizar");
 		mntmNewMenuItem_5.setFont(new Font("Arial", Font.BOLD, 12));
@@ -122,7 +122,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_1.add(mntmNewMenuItem_5);
+		mnReserva.add(mntmNewMenuItem_5);
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Eliminar");
 		mntmNewMenuItem_3.setFont(new Font("Arial", Font.BOLD, 12));
@@ -135,11 +135,11 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_1.add(mntmNewMenuItem_3);
+		mnReserva.add(mntmNewMenuItem_3);
 		
-		JMenu mnNewMenu_2 = new JMenu("Recepcionista");
-		mnNewMenu_2.setFont(new Font("Arial", Font.BOLD, 12));
-		menuBar.add(mnNewMenu_2);
+		JMenu mnRecepcionista = new JMenu("Recepcionista");
+		mnRecepcionista.setFont(new Font("Arial", Font.BOLD, 12));
+		menuBar.add(mnRecepcionista);
 		
 		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Listado habitaciones");
 		mntmNewMenuItem_6.setFont(new Font("Arial", Font.BOLD, 12));
@@ -152,7 +152,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_2.add(mntmNewMenuItem_6);
+		mnRecepcionista.add(mntmNewMenuItem_6);
 		
 		JMenuItem mntmNewMenuItem_8 = new JMenuItem("Precio habitaciones");
 		mntmNewMenuItem_8.setFont(new Font("Arial", Font.BOLD, 12));
@@ -165,7 +165,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_2.add(mntmNewMenuItem_8);
+		mnRecepcionista.add(mntmNewMenuItem_8);
 		
 		JMenuItem mntmNewMenuItem_9 = new JMenuItem("Descuento clientes");
 		mntmNewMenuItem_9.setFont(new Font("Arial", Font.BOLD, 12));
@@ -178,7 +178,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_2.add(mntmNewMenuItem_9);
+		mnRecepcionista.add(mntmNewMenuItem_9);
 		
 		JMenuItem mntmNewMenuItem_10 = new JMenuItem("Consultar habitancion");
 		mntmNewMenuItem_10.setFont(new Font("Arial", Font.BOLD, 12));
@@ -191,7 +191,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_2.add(mntmNewMenuItem_10);
+		mnRecepcionista.add(mntmNewMenuItem_10);
 		
 		JMenuItem mntmNewMenuItem_11 = new JMenuItem("Estimado precio");
 		mntmNewMenuItem_11.setFont(new Font("Arial", Font.BOLD, 12));
@@ -204,11 +204,11 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_2.add(mntmNewMenuItem_11);
+		mnRecepcionista.add(mntmNewMenuItem_11);
 		
-		JMenu mnNewMenu_3 = new JMenu("Administrador");
-		mnNewMenu_3.setFont(new Font("Arial", Font.BOLD, 12));
-		menuBar.add(mnNewMenu_3);
+		JMenu mnAdministrador = new JMenu("Administrador");
+		mnAdministrador.setFont(new Font("Arial", Font.BOLD, 12));
+		menuBar.add(mnAdministrador);
 		
 		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Precio habitacion");
 		mntmNewMenuItem_7.setFont(new Font("Arial", Font.BOLD, 12));
@@ -221,7 +221,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_3.add(mntmNewMenuItem_7);
+		mnAdministrador.add(mntmNewMenuItem_7);
 		
 		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Descuento clientes");
 		mntmNewMenuItem_12.setFont(new Font("Arial", Font.BOLD, 12));
@@ -234,7 +234,7 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_3.add(mntmNewMenuItem_12);
+		mnAdministrador.add(mntmNewMenuItem_12);
 		
 		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Calcular ganancias");
 		mntmNewMenuItem_13.setFont(new Font("Arial", Font.BOLD, 12));
@@ -247,21 +247,22 @@ public class frmMenu extends JFrame {
 				setVisible(false);
 			}
 		});
-		mnNewMenu_3.add(mntmNewMenuItem_13);
+		mnAdministrador.add(mntmNewMenuItem_13);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Creado por Emanuel Acevedo Muñoz");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(10, 466, 259, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblCreadoPor = new JLabel("Creado por Emanuel Acevedo Muñoz");
+		lblCreadoPor.setFont(new Font("Arial", Font.BOLD, 12));
+		lblCreadoPor.setBounds(10, 466, 259, 14);
+		contentPane.add(lblCreadoPor);
 		
-		JLabel lblNewLabel_2 = new JLabel("V 0.0.0");
-		lblNewLabel_2.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_2.setBounds(727, 466, 49, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblVersion = new JLabel("V 0.0.0");
+		lblVersion.setFont(new Font("Arial", Font.BOLD, 12));
+		lblVersion.setBounds(727, 466, 49, 14);
+		contentPane.add(lblVersion);
 	}
 }

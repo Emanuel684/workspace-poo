@@ -12,7 +12,6 @@ public class HABITACION {
 			{ "15", "Sencilla", "Sí", "" }, { "16", "Matrimonial", "Sí", "" }, { "17", "Sencilla", "Sí", "" } };
 
 	public HABITACION() {
-		// TODO Auto-generated constructor stub
 		this.NumeroHabitacion = 0;
 	}
 
@@ -24,16 +23,12 @@ public class HABITACION {
 
 		for (int k = 0; k < habitaciones.length; k++) {
 
-			System.out.println("ID_HABITACION: " + habitaciones[k][0]);
-
 			if (habitaciones[k][0].equals(numeroHabitacion)) {
 
 				if (HABITACION.habitaciones[k][1].equals("Sencilla")) {
 
 					float cantidadDescuentoTotal = (Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias)
 							* Integer.parseInt(descuento.split("%")[0])) / 100;
-
-					System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
 
 					precioReserva = String.valueOf((Integer.parseInt(SIMPLE.Precio) * Integer.parseInt(cantidadDias))
 							- cantidadDescuentoTotal);
@@ -42,15 +37,10 @@ public class HABITACION {
 
 					ReservarHabitacion(numeroHabitacion, false, numeroReserva);
 
-					// INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(SIMPLE.Precio) *
-					// Integer.parseInt(cantidadDias));
-
 				} else if (HABITACION.habitaciones[k][1].equals("Doble")) {
 
 					float cantidadDescuentoTotal = (Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias)
 							* Integer.parseInt(descuento.split("%")[0])) / 100;
-
-					System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
 
 					precioReserva = String.valueOf(
 							(Integer.parseInt(DOBLE.Precio) * Integer.parseInt(cantidadDias)) - cantidadDescuentoTotal);
@@ -59,15 +49,10 @@ public class HABITACION {
 
 					ReservarHabitacion(numeroHabitacion, false, numeroReserva);
 
-					// INICIO.datosReservas[j][4] = String.valueOf(Integer.parseInt(DOBLE.Precio) *
-					// Integer.parseInt(cantidadDias));
-
 				} else {
 
 					float cantidadDescuentoTotal = (Integer.parseInt(MATRIMONIAL.Precio)
 							* Integer.parseInt(cantidadDias) * Integer.parseInt(descuento.split("%")[0])) / 100;
-
-					System.out.println("cantidadDescuentoTotal: " + cantidadDescuentoTotal);
 
 					precioReserva = String
 							.valueOf((Integer.parseInt(MATRIMONIAL.Precio) * Integer.parseInt(cantidadDias))
@@ -85,7 +70,7 @@ public class HABITACION {
 	}
 
 	public void ReservarHabitacion(String id_habitacion, boolean disponible, String numeroReserva) {
-		System.out.println("ReservarHabitacion()");
+		
 		for (int i = 0; i < habitaciones.length; i++) {
 			if (habitaciones[i][0].equals(id_habitacion)) {
 				if (disponible) {

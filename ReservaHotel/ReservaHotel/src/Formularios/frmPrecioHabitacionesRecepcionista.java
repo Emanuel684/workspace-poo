@@ -55,14 +55,15 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 550);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Regresar");
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
@@ -71,41 +72,43 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(215, 206, 89, 23);
-		contentPane.add(btnNewButton);
+		btnRegresar.setBounds(388, 461, 89, 23);
+		contentPane.add(btnRegresar);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
-		comboBox.addActionListener(new ActionListener() {
+		JComboBox comboBoxTipoHabitacion = new JComboBox();
+		comboBoxTipoHabitacion.setBackground(new Color(255, 255, 255));
+		comboBoxTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
+		comboBoxTipoHabitacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				selectTipoHabitacion = comboBox.getSelectedItem().toString();
+				selectTipoHabitacion = comboBoxTipoHabitacion.getSelectedItem().toString();
 			}
 		});
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBox.setBounds(39, 104, 164, 22);
-		contentPane.add(comboBox);
+		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
+		comboBoxTipoHabitacion.setBounds(195, 229, 164, 22);
+		contentPane.add(comboBoxTipoHabitacion);
 		
-		JLabel lblHabitacionesSencillas = new JLabel("Tipo de habitación");
-		lblHabitacionesSencillas.setFont(new Font("Arial", Font.BOLD, 12));
-		lblHabitacionesSencillas.setBounds(39, 86, 120, 14);
-		contentPane.add(lblHabitacionesSencillas);
+		JLabel lblTipoDeHabitacion = new JLabel("Tipo de habitación");
+		lblTipoDeHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
+		lblTipoDeHabitacion.setBounds(195, 211, 120, 14);
+		contentPane.add(lblTipoDeHabitacion);
 		
 		textPrecioActualHabitacion = new JTextField();
-		textPrecioActualHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
+		textPrecioActualHabitacion.setToolTipText("Precio actual");
 		textPrecioActualHabitacion.setEnabled(false);
+		textPrecioActualHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		textPrecioActualHabitacion.setColumns(10);
-		textPrecioActualHabitacion.setBounds(249, 105, 96, 20);
+		textPrecioActualHabitacion.setBounds(405, 230, 96, 20);
 		contentPane.add(textPrecioActualHabitacion);
 		
 		JLabel lblPrecioActual = new JLabel("Precio actual");
 		lblPrecioActual.setFont(new Font("Arial", Font.BOLD, 12));
-		lblPrecioActual.setBounds(249, 86, 120, 14);
+		lblPrecioActual.setBounds(405, 211, 120, 14);
 		contentPane.add(lblPrecioActual);
 		
-		JLabel lblNewLabel = new JLabel("Precio habitacion");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(169, 27, 112, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("Precio habitacion");
+		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
+		lblTitulo.setBounds(259, 11, 218, 38);
+		contentPane.add(lblTitulo);
 		
 		JButton btnConsultarPrecio = new JButton("Consultar");
 		btnConsultarPrecio.setFont(new Font("Arial", Font.BOLD, 12));
@@ -128,7 +131,7 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 				
 			}
 		});
-		btnConsultarPrecio.setBounds(109, 206, 96, 23);
+		btnConsultarPrecio.setBounds(282, 461, 96, 23);
 		contentPane.add(btnConsultarPrecio);
 	}
 }

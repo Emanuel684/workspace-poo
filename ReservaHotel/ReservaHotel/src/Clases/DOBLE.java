@@ -2,13 +2,8 @@ package Clases;
 
 public class DOBLE extends HABITACION {
 	
-	String Foto;
+	String Foto = "";
 	public static String Precio = "200000";
-
-	public DOBLE() {
-		// TODO Auto-generated constructor stub
-		this.Foto = "";
-	}
 	
 	public void MostrarFoto() {
 		System.out.println("MostrarFoto()");
