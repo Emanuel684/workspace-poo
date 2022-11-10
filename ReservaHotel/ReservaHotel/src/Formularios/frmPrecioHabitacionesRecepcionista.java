@@ -84,12 +84,12 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 			}
 		});
 		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBoxTipoHabitacion.setBounds(195, 229, 164, 22);
+		comboBoxTipoHabitacion.setBounds(215, 229, 164, 22);
 		contentPane.add(comboBoxTipoHabitacion);
 		
 		JLabel lblTipoDeHabitacion = new JLabel("Tipo de habitación");
 		lblTipoDeHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
-		lblTipoDeHabitacion.setBounds(195, 211, 120, 14);
+		lblTipoDeHabitacion.setBounds(215, 211, 120, 14);
 		contentPane.add(lblTipoDeHabitacion);
 		
 		textPrecioActualHabitacion = new JTextField();
@@ -97,12 +97,12 @@ public class frmPrecioHabitacionesRecepcionista extends JFrame {
 		textPrecioActualHabitacion.setEnabled(false);
 		textPrecioActualHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		textPrecioActualHabitacion.setColumns(10);
-		textPrecioActualHabitacion.setBounds(405, 230, 96, 20);
+		textPrecioActualHabitacion.setBounds(425, 230, 96, 20);
 		contentPane.add(textPrecioActualHabitacion);
 		
 		JLabel lblPrecioActual = new JLabel("Precio actual");
 		lblPrecioActual.setFont(new Font("Arial", Font.BOLD, 12));
-		lblPrecioActual.setBounds(405, 211, 120, 14);
+		lblPrecioActual.setBounds(425, 211, 120, 14);
 		contentPane.add(lblPrecioActual);
 		
 		JLabel lblTitulo = new JLabel("Precio habitacion");

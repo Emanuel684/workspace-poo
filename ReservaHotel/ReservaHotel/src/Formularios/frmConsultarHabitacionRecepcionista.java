@@ -57,8 +57,8 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Consultar foto habitacion");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(331, 26, 164, 14);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
+		lblNewLabel.setBounds(213, 11, 334, 38);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Regresar");
@@ -75,6 +75,7 @@ public class frmConsultarHabitacionRecepcionista extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setBackground(new Color(255, 255, 255));
 		comboBox.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -76,7 +76,7 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Consultar habitaciones");
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
-		lblNewLabel.setBounds(346, 25, 160, 14);
+		lblNewLabel.setBounds(258, 5, 328, 38);
 		contentPane.add(lblNewLabel);
 		
 		JScrollPane scrollPane = new JScrollPane();

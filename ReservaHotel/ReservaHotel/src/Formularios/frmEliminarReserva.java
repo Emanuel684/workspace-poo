@@ -60,28 +60,28 @@ public class frmEliminarReserva extends JFrame {
 		
 		JLabel lblTitulo = new JLabel("Eliminar reserva");
 		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
-		lblTitulo.setBounds(161, 11, 80, 14);
+		lblTitulo.setBounds(279, 11, 209, 47);
 		contentPane.add(lblTitulo);
 		
 		JLabel lblNumeroDeReserva = new JLabel("Número de la reserva");
 		lblNumeroDeReserva.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNumeroDeReserva.setBounds(71, 56, 119, 14);
+		lblNumeroDeReserva.setBounds(249, 216, 149, 14);
 		contentPane.add(lblNumeroDeReserva);
 		
 		textNumeroReserva = new JTextField();
 		textNumeroReserva.setFont(new Font("Arial", Font.BOLD, 12));
-		textNumeroReserva.setBounds(71, 81, 96, 20);
+		textNumeroReserva.setBounds(249, 241, 116, 20);
 		contentPane.add(textNumeroReserva);
 		textNumeroReserva.setColumns(10);
 		
 		JLabel lblCedulaDelCliente = new JLabel("Cédula del cliente");
 		lblCedulaDelCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		lblCedulaDelCliente.setBounds(230, 56, 102, 14);
+		lblCedulaDelCliente.setBounds(408, 216, 125, 14);
 		contentPane.add(lblCedulaDelCliente);
 		
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		textCedulaCliente.setBounds(224, 81, 96, 20);
+		textCedulaCliente.setBounds(408, 241, 102, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
@@ -102,7 +102,7 @@ public class frmEliminarReserva extends JFrame {
 				
 			}
 		});
-		btnEliminar.setBounds(41, 170, 89, 23);
+		btnEliminar.setBounds(230, 447, 89, 23);
 		contentPane.add(btnEliminar);
 		
 		JButton btnImprimir = new JButton("Imprimir");
@@ -121,7 +121,7 @@ public class frmEliminarReserva extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnImprimir.setBounds(156, 170, 89, 23);
+		btnImprimir.setBounds(345, 447, 89, 23);
 		contentPane.add(btnImprimir);
 		
 		JButton btnCancelar = new JButton("Cancelar");
@@ -136,7 +136,7 @@ public class frmEliminarReserva extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnCancelar.setBounds(276, 170, 89, 23);
+		btnCancelar.setBounds(465, 447, 89, 23);
 		contentPane.add(btnCancelar);
 	}
 

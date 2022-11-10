@@ -73,35 +73,30 @@ public class frmIngresarActualizarReserva extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnCancelar.setBounds(223, 207, 89, 23);
+		btnCancelar.setBounds(406, 451, 89, 23);
 		contentPane.add(btnCancelar);
 		
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textCedulaCliente.setColumns(10);
-		textCedulaCliente.setBounds(171, 61, 108, 20);
+		textCedulaCliente.setBounds(343, 186, 108, 20);
 		contentPane.add(textCedulaCliente);
 		
 		textNumeroHabitacion = new JTextField();
 		textNumeroHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroHabitacion.setColumns(10);
-		textNumeroHabitacion.setBounds(20, 61, 108, 20);
+		textNumeroHabitacion.setBounds(192, 186, 108, 20);
 		contentPane.add(textNumeroHabitacion);
 		
 		JLabel lblNumeroHabitacion = new JLabel("Número habitacion");
 		lblNumeroHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNumeroHabitacion.setBounds(20, 36, 141, 14);
+		lblNumeroHabitacion.setBounds(192, 161, 141, 14);
 		contentPane.add(lblNumeroHabitacion);
 		
 		JLabel lblCedulaDelCliente = new JLabel("Cédula del cliente");
 		lblCedulaDelCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		lblCedulaDelCliente.setBounds(171, 36, 141, 14);
+		lblCedulaDelCliente.setBounds(343, 161, 141, 14);
 		contentPane.add(lblCedulaDelCliente);
-		
-		JLabel lblCrearReserva = new JLabel("Crear reserva");
-		lblCrearReserva.setFont(new Font("Arial", Font.BOLD, 24));
-		lblCrearReserva.setBounds(341, 11, 141, 14);
-		contentPane.add(lblCrearReserva);
 		
 		if(actualizar_view) {
 			JButton btnNewButton_2 = new JButton("Actualizar");
@@ -120,7 +115,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 					setVisible(false);
 				}
 			});
-			btnNewButton_2.setBounds(97, 207, 89, 23);
+			btnNewButton_2.setBounds(280, 451, 89, 23);
 			contentPane.add(btnNewButton_2);
 		} else {
 			JButton btnNewButton_1_1 = new JButton("Crear");
@@ -139,7 +134,7 @@ public class frmIngresarActualizarReserva extends JFrame {
 					setVisible(false);
 				}
 			});
-			btnNewButton_1_1.setBounds(97, 207, 89, 23);
+			btnNewButton_1_1.setBounds(282, 451, 89, 23);
 			contentPane.add(btnNewButton_1_1);
 		}
 		
@@ -152,17 +147,17 @@ public class frmIngresarActualizarReserva extends JFrame {
 			}
 		});
 		comboBoxDias.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
-		comboBoxDias.setBounds(20, 153, 77, 22);
+		comboBoxDias.setBounds(192, 278, 77, 22);
 		contentPane.add(comboBoxDias);
 		
 		JLabel lblDia = new JLabel("Dia");
 		lblDia.setFont(new Font("Arial", Font.BOLD, 12));
-		lblDia.setBounds(20, 128, 49, 14);
+		lblDia.setBounds(192, 253, 49, 14);
 		contentPane.add(lblDia);
 		
 		JLabel lblFechaDeComienzo = new JLabel("Fecha de comienzo");
 		lblFechaDeComienzo.setFont(new Font("Arial", Font.BOLD, 12));
-		lblFechaDeComienzo.setBounds(20, 103, 113, 14);
+		lblFechaDeComienzo.setBounds(192, 228, 113, 14);
 		contentPane.add(lblFechaDeComienzo);
 		
 		JComboBox comboBoxMes = new JComboBox();
@@ -173,35 +168,47 @@ public class frmIngresarActualizarReserva extends JFrame {
 			}
 		});
 		comboBoxMes.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}));
-		comboBoxMes.setBounds(125, 152, 84, 22);
+		comboBoxMes.setBounds(297, 277, 84, 22);
 		contentPane.add(comboBoxMes);
 		
 		JLabel lblMes = new JLabel("Mes");
 		lblMes.setFont(new Font("Arial", Font.BOLD, 12));
-		lblMes.setBounds(136, 128, 49, 14);
+		lblMes.setBounds(308, 253, 49, 14);
 		contentPane.add(lblMes);
 		
 		textYear = new JTextField();
 		textYear.setFont(new Font("Arial", Font.BOLD, 12));
 		textYear.setColumns(10);
-		textYear.setBounds(232, 153, 96, 20);
+		textYear.setBounds(404, 278, 96, 20);
 		contentPane.add(textYear);
 		
 		JLabel lblYear = new JLabel("Año");
 		lblYear.setFont(new Font("Arial", Font.BOLD, 12));
-		lblYear.setBounds(227, 128, 49, 14);
+		lblYear.setBounds(399, 253, 49, 14);
 		contentPane.add(lblYear);
 		
 		JLabel lblNumeroDeDias = new JLabel("Número de días");
 		lblNumeroDeDias.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNumeroDeDias.setBounds(325, 36, 102, 14);
+		lblNumeroDeDias.setBounds(497, 161, 102, 14);
 		contentPane.add(lblNumeroDeDias);
 		
 		textNumeroDias = new JTextField();
 		textNumeroDias.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroDias.setColumns(10);
-		textNumeroDias.setBounds(325, 61, 96, 20);
+		textNumeroDias.setBounds(497, 186, 96, 20);
 		contentPane.add(textNumeroDias);
+		
+		if(actualizar_view) {
+			JLabel lblActualizarReserva = new JLabel("Actualizar reserva");
+			lblActualizarReserva.setFont(new Font("Arial", Font.BOLD, 24));
+			lblActualizarReserva.setBounds(264, 11, 209, 47);
+			contentPane.add(lblActualizarReserva);
+		} else {
+			JLabel lblIngresarReserva = new JLabel("Ingresar reserva");
+			lblIngresarReserva.setFont(new Font("Arial", Font.BOLD, 24));
+			lblIngresarReserva.setBounds(264, 23, 209, 47);
+			contentPane.add(lblIngresarReserva);
+		}
 		
 		
 	}

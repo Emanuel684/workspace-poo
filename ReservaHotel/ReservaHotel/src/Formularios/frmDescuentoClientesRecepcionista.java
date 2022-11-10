@@ -58,9 +58,9 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Regresar");
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
@@ -69,12 +69,13 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(239, 211, 89, 23);
-		contentPane.add(btnNewButton);
+		btnRegresar.setBounds(409, 461, 89, 23);
+		contentPane.add(btnRegresar);
 		
-		JButton btnNewButton_1 = new JButton("Consultar");
-		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnConsultar = new JButton("Consultar");
+		btnConsultar.setForeground(new Color(0, 0, 0));
+		btnConsultar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HABITUAL descuentoCliente = new HABITUAL();
 				String descuento = descuentoCliente.DescuentoCliente(textCedulaCliente.getText());
@@ -95,22 +96,22 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 				*/
 			}
 		});
-		btnNewButton_1.setBounds(121, 211, 97, 23);
-		contentPane.add(btnNewButton_1);
+		btnConsultar.setBounds(291, 461, 97, 23);
+		contentPane.add(btnConsultar);
 		
-		JLabel lblNewLabel = new JLabel("Descuento clientes");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(169, 11, 113, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("Descuento clientes");
+		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
+		lblTitulo.setBounds(262, 11, 226, 43);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Cedula cliente");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1.setBounds(180, 50, 87, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblCedulaCliente = new JLabel("Cedula cliente");
+		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		lblCedulaCliente.setBounds(336, 99, 87, 14);
+		contentPane.add(lblCedulaCliente);
 		
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		textCedulaCliente.setBounds(169, 84, 113, 20);
+		textCedulaCliente.setBounds(325, 133, 113, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
@@ -118,13 +119,13 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 		textDescuentoCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textDescuentoCliente.setEnabled(false);
 		textDescuentoCliente.setColumns(10);
-		textDescuentoCliente.setBounds(169, 151, 113, 20);
+		textDescuentoCliente.setBounds(325, 200, 113, 20);
 		contentPane.add(textDescuentoCliente);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Descuento");
-		lblNewLabel_1_1.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_1_1.setBounds(193, 126, 74, 14);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblDescuento = new JLabel("Descuento");
+		lblDescuento.setFont(new Font("Arial", Font.BOLD, 12));
+		lblDescuento.setBounds(349, 175, 74, 14);
+		contentPane.add(lblDescuento);
 	}
 
 }

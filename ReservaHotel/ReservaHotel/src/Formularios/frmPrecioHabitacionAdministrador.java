@@ -74,17 +74,17 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnRegresar.setBounds(261, 214, 89, 23);
+		btnRegresar.setBounds(436, 452, 89, 23);
 		contentPane.add(btnRegresar);
 		
 		JLabel lblTipoDeHabitacion = new JLabel("Tipo de habitación");
 		lblTipoDeHabitacion.setFont(new Font("Arial", Font.BOLD, 11));
-		lblTipoDeHabitacion.setBounds(36, 51, 120, 14);
+		lblTipoDeHabitacion.setBounds(225, 192, 120, 14);
 		contentPane.add(lblTipoDeHabitacion);
 		
 		JLabel lblTitulo = new JLabel("Precio habitacion");
 		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
-		lblTitulo.setBounds(167, 11, 120, 14);
+		lblTitulo.setBounds(263, 11, 233, 55);
 		contentPane.add(lblTitulo);
 		
 		JButton btnCambiarPrecio = new JButton("Cambir precio");
@@ -109,7 +109,7 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 				}
 			}
 		});
-		btnCambiarPrecio.setBounds(92, 214, 133, 23);
+		btnCambiarPrecio.setBounds(267, 452, 133, 23);
 		contentPane.add(btnCambiarPrecio);
 		
 		JComboBox comboBoxTipoHabitacion = new JComboBox();
@@ -132,30 +132,30 @@ public class frmPrecioHabitacionAdministrador extends JFrame {
 			}
 		});
 		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBoxTipoHabitacion.setBounds(36, 69, 164, 22);
+		comboBoxTipoHabitacion.setBounds(225, 210, 164, 22);
 		contentPane.add(comboBoxTipoHabitacion);
 		
 		JLabel lblPrecioActual = new JLabel("Precio actual");
 		lblPrecioActual.setFont(new Font("Arial", Font.BOLD, 11));
-		lblPrecioActual.setBounds(246, 51, 120, 14);
+		lblPrecioActual.setBounds(435, 192, 120, 14);
 		contentPane.add(lblPrecioActual);
 		
 		textPrecioActual = new JTextField();
 		textPrecioActual.setFont(new Font("Arial", Font.BOLD, 11));
 		textPrecioActual.setEnabled(false);
-		textPrecioActual.setBounds(246, 70, 96, 20);
+		textPrecioActual.setBounds(435, 211, 96, 20);
 		contentPane.add(textPrecioActual);
 		textPrecioActual.setColumns(10);
 		
 		JLabel lblNuevoPrecio = new JLabel("Nuevo precio");
 		lblNuevoPrecio.setFont(new Font("Arial", Font.BOLD, 11));
-		lblNuevoPrecio.setBounds(246, 113, 120, 14);
+		lblNuevoPrecio.setBounds(435, 254, 120, 14);
 		contentPane.add(lblNuevoPrecio);
 		
 		textNuevoPrecio = new JTextField();
 		textNuevoPrecio.setFont(new Font("Arial", Font.BOLD, 11));
 		textNuevoPrecio.setColumns(10);
-		textNuevoPrecio.setBounds(246, 132, 96, 20);
+		textNuevoPrecio.setBounds(435, 273, 96, 20);
 		contentPane.add(textNuevoPrecio);
 	}
 

@@ -57,18 +57,18 @@ public class frmEliminarCliente extends JFrame {
 
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		textCedulaCliente.setBounds(344, 242, 109, 20);
+		textCedulaCliente.setBounds(331, 242, 122, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 
-		JLabel lblNewLabel = new JLabel("Cedula cliente");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel.setBounds(344, 217, 109, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblCedulaCliente = new JLabel("Cedula cliente");
+		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
+		lblCedulaCliente.setBounds(344, 217, 109, 14);
+		contentPane.add(lblCedulaCliente);
 
-		JButton btnNewButton = new JButton("Regresar");
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
@@ -77,12 +77,12 @@ public class frmEliminarCliente extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(10, 11, 89, 23);
-		contentPane.add(btnNewButton);
+		btnRegresar.setBounds(10, 11, 89, 23);
+		contentPane.add(btnRegresar);
 
-		JButton btnNewButton_1 = new JButton("Eliminar");
-		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				// Para eliminar un cliente
@@ -97,7 +97,12 @@ public class frmEliminarCliente extends JFrame {
 				JOptionPane.showMessageDialog(null, "Cliente eliminado correctamente");
 			}
 		});
-		btnNewButton_1.setBounds(358, 431, 89, 23);
-		contentPane.add(btnNewButton_1);
+		btnEliminar.setBounds(331, 457, 89, 23);
+		contentPane.add(btnEliminar);
+		
+		JLabel lblEliminarCliente = new JLabel("Eliminar cliente");
+		lblEliminarCliente.setFont(new Font("Arial", Font.BOLD, 24));
+		lblEliminarCliente.setBounds(295, 11, 199, 38);
+		contentPane.add(lblEliminarCliente);
 	}
 }

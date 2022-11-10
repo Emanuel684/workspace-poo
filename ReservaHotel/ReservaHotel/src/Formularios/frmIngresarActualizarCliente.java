@@ -67,60 +67,60 @@ public class frmIngresarActualizarCliente extends JFrame {
 		
 		txtCedulaCliente = new JTextField();
 		txtCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		txtCedulaCliente.setBounds(212, 8, 145, 20);
+		txtCedulaCliente.setBounds(399, 164, 145, 20);
 		contentPane.add(txtCedulaCliente);
 		txtCedulaCliente.setColumns(10);
 		
 		JLabel lblCedulaCliente = new JLabel("Cédula cliente");
 		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		lblCedulaCliente.setBounds(20, 11, 113, 14);
+		lblCedulaCliente.setBounds(207, 167, 113, 14);
 		contentPane.add(lblCedulaCliente);
 		
 		JLabel lblNombreCompleto = new JLabel("Nombre completo");
 		lblNombreCompleto.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNombreCompleto.setBounds(20, 36, 113, 14);
+		lblNombreCompleto.setBounds(207, 192, 113, 14);
 		contentPane.add(lblNombreCompleto);
 		
 		textNombreCompleto = new JTextField();
 		textNombreCompleto.setFont(new Font("Arial", Font.BOLD, 12));
-		textNombreCompleto.setBounds(212, 33, 145, 20);
+		textNombreCompleto.setBounds(399, 189, 145, 20);
 		contentPane.add(textNombreCompleto);
 		textNombreCompleto.setColumns(10);
 		
 		JLabel lblEmail = new JLabel("Email");
 		lblEmail.setFont(new Font("Arial", Font.BOLD, 12));
-		lblEmail.setBounds(20, 59, 49, 14);
+		lblEmail.setBounds(207, 215, 49, 14);
 		contentPane.add(lblEmail);
 		
 		textEmail = new JTextField();
 		textEmail.setFont(new Font("Arial", Font.BOLD, 12));
-		textEmail.setBounds(212, 56, 145, 20);
+		textEmail.setBounds(399, 212, 145, 20);
 		contentPane.add(textEmail);
 		textEmail.setColumns(10);
 		
 		JLabel lblFechaDeNacimiento = new JLabel("Fecha de nacimiento");
 		lblFechaDeNacimiento.setFont(new Font("Arial", Font.BOLD, 12));
-		lblFechaDeNacimiento.setBounds(20, 84, 113, 14);
+		lblFechaDeNacimiento.setBounds(207, 240, 113, 14);
 		contentPane.add(lblFechaDeNacimiento);
 		
 		JLabel lblDia = new JLabel("Dia");
 		lblDia.setFont(new Font("Arial", Font.BOLD, 12));
-		lblDia.setBounds(20, 109, 49, 14);
+		lblDia.setBounds(207, 265, 49, 14);
 		contentPane.add(lblDia);
 		
 		JLabel lblMes = new JLabel("Mes");
 		lblMes.setFont(new Font("Arial", Font.BOLD, 12));
-		lblMes.setBounds(136, 109, 49, 14);
+		lblMes.setBounds(323, 265, 49, 14);
 		contentPane.add(lblMes);
 		
 		JLabel lblYear = new JLabel("Año");
 		lblYear.setFont(new Font("Arial", Font.BOLD, 12));
-		lblYear.setBounds(237, 109, 49, 14);
+		lblYear.setBounds(424, 265, 49, 14);
 		contentPane.add(lblYear);
 		
 		textYear = new JTextField();
 		textYear.setFont(new Font("Arial", Font.BOLD, 12));
-		textYear.setBounds(232, 134, 96, 20);
+		textYear.setBounds(419, 290, 96, 20);
 		contentPane.add(textYear);
 		textYear.setColumns(10);
 		
@@ -140,7 +140,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 					setVisible(false);
 				}
 			});
-			btnNewButton.setBounds(107, 213, 89, 23);
+			btnNewButton.setBounds(268, 453, 89, 23);
 			contentPane.add(btnNewButton);
 		} else {
 			JButton btnNewButton = new JButton("Guardar");
@@ -158,7 +158,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 					setVisible(false);
 				}
 			});
-			btnNewButton.setBounds(107, 213, 89, 23);
+			btnNewButton.setBounds(268, 453, 89, 23);
 			contentPane.add(btnNewButton);
 		}
 		
@@ -172,7 +172,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnCancelar.setBounds(219, 213, 89, 23);
+		btnCancelar.setBounds(380, 453, 89, 23);
 		contentPane.add(btnCancelar);
 		
 		JComboBox comboBoxDia = new JComboBox();
@@ -183,7 +183,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 			}
 		});
 		comboBoxDia.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
-		comboBoxDia.setBounds(20, 134, 77, 22);
+		comboBoxDia.setBounds(207, 290, 77, 22);
 		contentPane.add(comboBoxDia);
 		
 		JComboBox comboBoxMes = new JComboBox();
@@ -194,7 +194,20 @@ public class frmIngresarActualizarCliente extends JFrame {
 			}
 		});
 		comboBoxMes.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}));
-		comboBoxMes.setBounds(125, 133, 84, 22);
+		comboBoxMes.setBounds(312, 289, 84, 22);
 		contentPane.add(comboBoxMes);
+		
+		if(actualizar_view) {
+			JLabel lblActualizarCliente = new JLabel("Actualizar cliente");
+			lblActualizarCliente.setFont(new Font("Arial", Font.BOLD, 24));
+			lblActualizarCliente.setBounds(264, 11, 209, 47);
+			contentPane.add(lblActualizarCliente);
+		} else {
+			JLabel lblIngresarCliente = new JLabel("Ingresar cliente");
+			lblIngresarCliente.setFont(new Font("Arial", Font.BOLD, 24));
+			lblIngresarCliente.setBounds(264, 23, 209, 47);
+			contentPane.add(lblIngresarCliente);
+		}
+		
 	}
 }

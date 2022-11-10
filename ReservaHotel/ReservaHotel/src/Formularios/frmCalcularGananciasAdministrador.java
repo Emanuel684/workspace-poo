@@ -71,17 +71,17 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		
 		JLabel lblDiaInicio = new JLabel("Dia inicio");
 		lblDiaInicio.setFont(new Font("Arial", Font.BOLD, 12));
-		lblDiaInicio.setBounds(225, 124, 49, 14);
+		lblDiaInicio.setBounds(225, 124, 89, 14);
 		contentPane.add(lblDiaInicio);
 		
 		JLabel lblNewLabel_5 = new JLabel("Mes inicio");
 		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_5.setBounds(341, 124, 49, 14);
+		lblNewLabel_5.setBounds(341, 124, 79, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("Año inicio");
 		lblNewLabel_6.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNewLabel_6.setBounds(442, 124, 49, 14);
+		lblNewLabel_6.setBounds(442, 124, 89, 14);
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_4_1 = new JLabel("Dia fin");

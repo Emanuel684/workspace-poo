@@ -77,7 +77,7 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		
 		JLabel lblCedulaCliente = new JLabel("Cédula cliente");
 		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		lblCedulaCliente.setBounds(83, 58, 83, 14);
+		lblCedulaCliente.setBounds(226, 134, 83, 14);
 		contentPane.add(lblCedulaCliente);
 		
 		JButton btnPrecioEstimado = new JButton("Precio estimado");
@@ -92,41 +92,41 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 				
 			}
 		});
-		btnPrecioEstimado.setBounds(147, 229, 139, 23);
+		btnPrecioEstimado.setBounds(319, 462, 139, 23);
 		contentPane.add(btnPrecioEstimado);
 		
 		JLabel lblPrecioEstimado = new JLabel("El precio estimado es de:");
 		lblPrecioEstimado.setFont(new Font("Arial", Font.BOLD, 12));
-		lblPrecioEstimado.setBounds(52, 186, 166, 14);
+		lblPrecioEstimado.setBounds(226, 314, 166, 14);
 		contentPane.add(lblPrecioEstimado);
 		
 		textCalculado = new JTextField();
 		textCalculado.setFont(new Font("Arial", Font.BOLD, 12));
 		textCalculado.setEnabled(false);
-		textCalculado.setBounds(228, 183, 96, 20);
+		textCalculado.setBounds(402, 311, 96, 20);
 		contentPane.add(textCalculado);
 		textCalculado.setColumns(10);
 		
 		textCedulaCliente = new JTextField();
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
-		textCedulaCliente.setBounds(83, 83, 117, 20);
+		textCedulaCliente.setBounds(226, 159, 117, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
 		JLabel lblTipoHabitacion = new JLabel("Tipo habitación");
 		lblTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
-		lblTipoHabitacion.setBounds(83, 114, 105, 14);
+		lblTipoHabitacion.setBounds(226, 190, 105, 14);
 		contentPane.add(lblTipoHabitacion);
 		
 		JLabel lblNumeroDeNoches = new JLabel("Número de noches");
 		lblNumeroDeNoches.setFont(new Font("Arial", Font.BOLD, 12));
-		lblNumeroDeNoches.setBounds(242, 58, 126, 14);
+		lblNumeroDeNoches.setBounds(385, 134, 126, 14);
 		contentPane.add(lblNumeroDeNoches);
 		
 		textNumeroNoches = new JTextField();
 		textNumeroNoches.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroNoches.setText("");
-		textNumeroNoches.setBounds(242, 83, 105, 20);
+		textNumeroNoches.setBounds(416, 211, 105, 20);
 		contentPane.add(textNumeroNoches);
 		textNumeroNoches.setColumns(10);
 		
@@ -138,7 +138,12 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 			}
 		});
 		comboBoxTipoHabitacion.setModel(new DefaultComboBoxModel(new String[] {"Habitaciones sencilla", "Habitaciones doble", "Habitaciones matrimonial"}));
-		comboBoxTipoHabitacion.setBounds(83, 138, 166, 22);
+		comboBoxTipoHabitacion.setBounds(226, 214, 166, 22);
 		contentPane.add(comboBoxTipoHabitacion);
+		
+		JLabel lblEstimarPrecio = new JLabel("Estimar precio");
+		lblEstimarPrecio.setFont(new Font("Arial", Font.BOLD, 24));
+		lblEstimarPrecio.setBounds(289, 15, 209, 47);
+		contentPane.add(lblEstimarPrecio);
 	}
 }
