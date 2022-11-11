@@ -31,6 +31,7 @@ public class RESERVACION {
 						INICIO.datosReservas[j][2] = cedulaCliente;
 						INICIO.datosReservas[j][3] = numeroHabitacion;
 						INICIO.datosReservas[j][5] = String.valueOf(j);
+						INICIO.datosReservas[j][6] = "true";
 
 						HABITACION precioHabitacion = new HABITACION();
 
@@ -67,6 +68,7 @@ public class RESERVACION {
 						INICIO.datosReservas[j][2] = cedulaCliente;
 						INICIO.datosReservas[j][3] = numeroHabitacion;
 						INICIO.datosReservas[j][5] = String.valueOf(j);
+						INICIO.datosReservas[j][6] = "true";
 
 						HABITACION precioHabitacion = new HABITACION();
 
@@ -99,6 +101,7 @@ public class RESERVACION {
 						INICIO.datosReservas[j][1] = "";
 						INICIO.datosReservas[j][2] = "";
 						INICIO.datosReservas[j][4] = "";
+						INICIO.datosReservas[j][6] = "";
 
 						for (int k = 0; k < HABITACION.habitaciones.length; k++) {
 
@@ -154,11 +157,6 @@ public class RESERVACION {
 
 					if (INICIO.datosReservas[j][5].equals(numeroReserva)) {
 
-						INICIO.datosReservas[j][0] = "";
-						INICIO.datosReservas[j][1] = "";
-						INICIO.datosReservas[j][2] = "";
-						INICIO.datosReservas[j][4] = "";
-
 						for (int k = 0; k < HABITACION.habitaciones.length; k++) {
 
 							if (HABITACION.habitaciones[k][0].equals(INICIO.datosReservas[j][3])) {
@@ -169,8 +167,7 @@ public class RESERVACION {
 
 									reservarHabitacion.ReservarHabitacion(INICIO.datosReservas[j][3], true, "", "", "");
 
-									INICIO.datosReservas[j][5] = "";
-									INICIO.datosReservas[j][3] = "";
+									INICIO.datosReservas[j][6] = "false";
 
 								} else if (HABITACION.habitaciones[k][1].equals("Doble")) {
 
@@ -178,8 +175,7 @@ public class RESERVACION {
 
 									reservarHabitacion.ReservarHabitacion(INICIO.datosReservas[j][3], true, "", "", "");
 
-									INICIO.datosReservas[j][5] = "";
-									INICIO.datosReservas[j][3] = "";
+									INICIO.datosReservas[j][6] = "false";
 
 								} else {
 
@@ -187,8 +183,7 @@ public class RESERVACION {
 
 									reservarHabitacion.ReservarHabitacion(INICIO.datosReservas[j][3], true, "", "", "");
 
-									INICIO.datosReservas[j][5] = "";
-									INICIO.datosReservas[j][3] = "";
+									INICIO.datosReservas[j][6] = "false";
 								}
 								break;
 							}

@@ -152,8 +152,8 @@ public class frmMenu extends JFrame {
 		JMenuItem mntmNewMenuItem_14 = new JMenuItem("Caja");
 		mntmNewMenuItem_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frmListadoHabitacionesRecepcionista frmListadoHabitacionesRecepcionista = new frmListadoHabitacionesRecepcionista();
-				frmListadoHabitacionesRecepcionista.setVisible(true);
+				frmCajaRecepcionista frmCajaRecepcionista = new frmCajaRecepcionista();
+				frmCajaRecepcionista.setVisible(true);
 				
 				// Cerramos la ventana actual
 				setVisible(false);
