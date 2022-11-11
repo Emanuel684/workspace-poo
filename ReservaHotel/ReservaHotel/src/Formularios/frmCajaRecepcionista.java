@@ -94,7 +94,7 @@ public class frmCajaRecepcionista extends JFrame {
 				eliminarReservacion.PagarReserva(textNumeroReserva.getText(), textCedulaCliente.getText());
 				
 				// Navegamos al menu
-				JOptionPane.showMessageDialog(null,"Reserva eliminada correctamente");
+				JOptionPane.showMessageDialog(null,"Reserva cancelada correctamente");
 				frmMenu frmMenu = new frmMenu();
 				frmMenu.setVisible(true);
 				

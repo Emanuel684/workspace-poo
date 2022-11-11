@@ -10,6 +10,7 @@ public class HOTEL {
 			if(INICIO.datosReservas[j][0] != "") {
 				
 				String str = INICIO.datosReservas[j][0];
+				System.out.println("INICIO.datosReservas[j][4]: " + INICIO.datosReservas[j][4]);
 				
 		        String[] arrOfStr = str.split("/", 5);
 		        
