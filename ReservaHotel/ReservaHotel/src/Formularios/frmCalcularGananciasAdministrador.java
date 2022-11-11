@@ -99,7 +99,9 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 		lblNewLabel_6_1.setBounds(442, 202, 49, 14);
 		contentPane.add(lblNewLabel_6_1);
 		
-		JButton btnNewButton = new JButton("Calcular");
+		JButton btnNewButton = new JButton("CALCULAR");
+		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -110,10 +112,12 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 				textCalcularGanancias.setText(gananciasTotales);
 			}
 		});
-		btnNewButton.setBounds(266, 456, 89, 23);
+		btnNewButton.setBounds(240, 456, 115, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Regresar");
+		JButton btnNewButton_1 = new JButton("REGRESAR");
+		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setForeground(new Color(0, 0, 0));
 		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,7 +128,7 @@ public class frmCalcularGananciasAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_1.setBounds(383, 456, 89, 23);
+		btnNewButton_1.setBounds(383, 456, 118, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("Las ganancias son:");

@@ -24,7 +24,11 @@ public class HOTEL {
 					if(Integer.parseInt(mesInicio) <= Integer.parseInt(mesInicioReserva) && Integer.parseInt(mesInicioReserva) <= Integer.parseInt(mesFinal)) {
 						
 						if(Integer.parseInt(yearInicio) <= Integer.parseInt(yearInicioReserva) && Integer.parseInt(yearInicioReserva) <= Integer.parseInt(yearFinal)) {
-							gananciasTotales = String.valueOf(Double.parseDouble(gananciasTotales) + Double.parseDouble(INICIO.datosReservas[j][4]));
+
+							if(INICIO.datosReservas[j][4] != "") {
+								gananciasTotales = String.valueOf(Double.parseDouble(gananciasTotales) + Double.parseDouble(INICIO.datosReservas[j][4]));
+							}
+							
 						}
 						
 					}
@@ -44,6 +48,8 @@ public class HOTEL {
 			
 			
 		}
+		
+		System.out.println("gananciasTotales: " + gananciasTotales);
 		
 		return gananciasTotales;
 		

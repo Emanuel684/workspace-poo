@@ -82,7 +82,9 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 		lblDescuento.setBounds(395, 153, 77, 14);
 		contentPane.add(lblDescuento);
 		
-		JButton btnAplicar = new JButton("Aplicar");
+		JButton btnAplicar = new JButton("APLICAR");
+		btnAplicar.setForeground(new Color(0, 0, 0));
+		btnAplicar.setBackground(new Color(255, 255, 255));
 		btnAplicar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnAplicar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -97,10 +99,12 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnAplicar.setBounds(266, 454, 89, 23);
+		btnAplicar.setBounds(266, 454, 111, 23);
 		contentPane.add(btnAplicar);
 		
-		JButton btnRegresar = new JButton("Regresar");
+		JButton btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setBackground(new Color(255, 255, 255));
+		btnRegresar.setForeground(new Color(0, 0, 0));
 		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -111,7 +115,7 @@ public class frmDescuentoClientesAdministrador extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnRegresar.setBounds(387, 454, 89, 23);
+		btnRegresar.setBounds(387, 454, 110, 23);
 		contentPane.add(btnRegresar);
 		
 		JComboBox comboBox = new JComboBox();

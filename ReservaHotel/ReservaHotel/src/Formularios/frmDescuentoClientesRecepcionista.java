@@ -58,7 +58,9 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnRegresar = new JButton("Regresar");
+		JButton btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setBackground(new Color(255, 255, 255));
+		btnRegresar.setForeground(new Color(0, 0, 0));
 		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -69,10 +71,11 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnRegresar.setBounds(409, 461, 89, 23);
+		btnRegresar.setBounds(409, 461, 113, 23);
 		contentPane.add(btnRegresar);
 		
-		JButton btnConsultar = new JButton("Consultar");
+		JButton btnConsultar = new JButton("CONSULTAR");
+		btnConsultar.setBackground(new Color(255, 255, 255));
 		btnConsultar.setForeground(new Color(0, 0, 0));
 		btnConsultar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnConsultar.addActionListener(new ActionListener() {
@@ -96,7 +99,7 @@ public class frmDescuentoClientesRecepcionista extends JFrame {
 				*/
 			}
 		});
-		btnConsultar.setBounds(291, 461, 97, 23);
+		btnConsultar.setBounds(262, 461, 126, 23);
 		contentPane.add(btnConsultar);
 		
 		JLabel lblTitulo = new JLabel("Descuento clientes");

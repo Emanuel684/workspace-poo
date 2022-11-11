@@ -125,7 +125,10 @@ public class frmIngresarActualizarCliente extends JFrame {
 		textYear.setColumns(10);
 		
 		if(actualizar_view) {
-			JButton btnNewButton = new JButton("Actualizar");
+			JButton btnNewButton = new JButton("ACTUALIZAR");
+			btnNewButton.setBackground(new Color(255, 255, 255));
+			btnNewButton.setForeground(new Color(0, 0, 0));
+			btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -140,10 +143,13 @@ public class frmIngresarActualizarCliente extends JFrame {
 					setVisible(false);
 				}
 			});
-			btnNewButton.setBounds(268, 453, 89, 23);
+			btnNewButton.setBounds(244, 453, 113, 23);
 			contentPane.add(btnNewButton);
 		} else {
-			JButton btnNewButton = new JButton("Guardar");
+			JButton btnNewButton = new JButton("GUARDAR");
+			btnNewButton.setBackground(new Color(255, 255, 255));
+			btnNewButton.setForeground(new Color(0, 0, 0));
+			btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -158,11 +164,13 @@ public class frmIngresarActualizarCliente extends JFrame {
 					setVisible(false);
 				}
 			});
-			btnNewButton.setBounds(268, 453, 89, 23);
+			btnNewButton.setBounds(261, 453, 96, 23);
 			contentPane.add(btnNewButton);
 		}
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		JButton btnCancelar = new JButton("CANCELAR");
+		btnCancelar.setForeground(new Color(0, 0, 0));
+		btnCancelar.setBackground(new Color(255, 255, 255));
 		btnCancelar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -172,7 +180,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnCancelar.setBounds(380, 453, 89, 23);
+		btnCancelar.setBounds(380, 453, 113, 23);
 		contentPane.add(btnCancelar);
 		
 		JComboBox comboBoxDia = new JComboBox();

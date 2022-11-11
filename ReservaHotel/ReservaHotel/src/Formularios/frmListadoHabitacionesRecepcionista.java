@@ -60,7 +60,9 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnRegresar = new JButton("Regresar");
+		JButton btnRegresar = new JButton("REGRESAR");
+		btnRegresar.setBackground(new Color(255, 255, 255));
+		btnRegresar.setForeground(new Color(0, 0, 0));
 		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -71,10 +73,11 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnRegresar.setBounds(377, 479, 89, 23);
+		btnRegresar.setBounds(348, 479, 118, 23);
 		contentPane.add(btnRegresar);
 		
 		JLabel lblNewLabel = new JLabel("Consultar habitaciones");
+		lblNewLabel.setForeground(new Color(0, 0, 0));
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
 		lblNewLabel.setBounds(258, 5, 328, 38);
 		contentPane.add(lblNewLabel);
@@ -84,6 +87,7 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
+		table.setForeground(new Color(0, 0, 0));
 		table.setEnabled(false);
 		table.setFont(new Font("Arial", Font.BOLD, 12));
 		scrollPane.setViewportView(table);
@@ -97,11 +101,11 @@ public class frmListadoHabitacionesRecepcionista extends JFrame {
 		table.setModel(new DefaultTableModel(
 				new HABITACION().HabitacionesDisponibles(),
 			new String[] {
-				"N\u00FAmero habitacion", "Tipo habitacion", "Disponible", "N\u00FAmero reserva"
+				"N\u00FAmero habitacion", "Tipo habitacion", "Disponible", "N\u00FAmero reserva", "Cliente", "Precio"
 			}
 		) {
 			Class[] columnTypes = new Class[] {
-				Object.class, Object.class, String.class, Object.class
+				Object.class, Object.class, String.class, Object.class, Object.class, Object.class
 			};
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];

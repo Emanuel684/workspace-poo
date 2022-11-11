@@ -1,24 +1,23 @@
 package Formularios;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import Clases.RESERVACION;
 
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
-import java.awt.Toolkit;
-import java.awt.Color;
-
-public class frmEliminarReserva extends JFrame {
+public class frmCajaRecepcionista extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textNumeroReserva;
@@ -31,7 +30,7 @@ public class frmEliminarReserva extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frmEliminarReserva frame = new frmEliminarReserva();
+					frmCajaRecepcionista frame = new frmCajaRecepcionista();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +42,7 @@ public class frmEliminarReserva extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public frmEliminarReserva() {
+	public frmCajaRecepcionista() {
 		setForeground(new Color(255, 255, 255));
 		setFont(new Font("Arial", Font.BOLD, 12));
 		setTitle("Hotel Gestor");
@@ -58,7 +57,7 @@ public class frmEliminarReserva extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblTitulo = new JLabel("Eliminar reserva");
+		JLabel lblTitulo = new JLabel("Caja clientes");
 		lblTitulo.setFont(new Font("Arial", Font.BOLD, 24));
 		lblTitulo.setBounds(279, 11, 209, 47);
 		contentPane.add(lblTitulo);
@@ -85,14 +84,14 @@ public class frmEliminarReserva extends JFrame {
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
-		JButton btnEliminar = new JButton("ELIMINAR");
-		btnEliminar.setBackground(new Color(255, 255, 255));
-		btnEliminar.setForeground(new Color(0, 0, 0));
-		btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
-		btnEliminar.addActionListener(new ActionListener() {
+		JButton btnPagar = new JButton("PAGAR");
+		btnPagar.setBackground(new Color(255, 255, 255));
+		btnPagar.setForeground(new Color(0, 0, 0));
+		btnPagar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnPagar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RESERVACION eliminarReservacion = new RESERVACION();
-				eliminarReservacion.EliminarReserva(textNumeroReserva.getText(), textCedulaCliente.getText());
+				eliminarReservacion.PagarReserva(textNumeroReserva.getText(), textCedulaCliente.getText());
 				
 				// Navegamos al menu
 				JOptionPane.showMessageDialog(null,"Reserva eliminada correctamente");
@@ -104,8 +103,8 @@ public class frmEliminarReserva extends JFrame {
 				
 			}
 		});
-		btnEliminar.setBounds(217, 447, 102, 23);
-		contentPane.add(btnEliminar);
+		btnPagar.setBounds(217, 447, 102, 23);
+		contentPane.add(btnPagar);
 		
 		JButton btnImprimir = new JButton("IMPRIMIR");
 		btnImprimir.setForeground(new Color(0, 0, 0));

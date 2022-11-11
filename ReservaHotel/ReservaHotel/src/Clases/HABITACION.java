@@ -4,12 +4,25 @@ public class HABITACION {
 
 	private int NumeroHabitacion;
 
-	public static Object[][] habitaciones = new Object[][] { { "1", "Doble", "Sí", "" }, { "2", "Sencilla", "Sí", "" },
-			{ "3", "Matrimonial", "Sí", "" }, { "4", "Sencilla", "Sí", "" }, { "5", "Matrimonial", "Sí", "" },
-			{ "6", "Doble", "Sí", "" }, { "7", "Sencilla", "Sí", "" }, { "8", "Matrimonial", "Sí", "" },
-			{ "9", "Sencilla", "Sí", "" }, { "10", "Doble", "Sí", "" }, { "11", "Sencilla", "Sí", "" },
-			{ "12", "Matrimonial", "Sí", "" }, { "13", "Sencilla", "Sí", "" }, { "14", "Doble", "Sí", "" },
-			{ "15", "Sencilla", "Sí", "" }, { "16", "Matrimonial", "Sí", "" }, { "17", "Sencilla", "Sí", "" } };
+	public static Object[][] habitaciones = new Object[][] {
+		{"1", "Doble", "S\u00ED", "", "", ""},
+		{"2", "Sencilla", "S\u00ED", "", "", ""},
+		{"3", "Matrimonial", "S\u00ED", "", "", ""},
+		{"4", "Sencilla", "S\u00ED", "", "", ""},
+		{"5", "Matrimonial", "S\u00ED", "", "", ""},
+		{"6", "Doble", "S\u00ED", "", "", ""},
+		{"7", "Sencilla", "S\u00ED", "", "", ""},
+		{"8", "Matrimonial", "S\u00ED", "", "", ""},
+		{"9", "Sencilla", "S\u00ED", "", "", ""},
+		{"10", "Doble", "S\u00ED", "", "", ""},
+		{"11", "Sencilla", "S\u00ED", "", "", ""},
+		{"12", "Matrimonial", "S\u00ED", "", "", ""},
+		{"13", "Sencilla", "S\u00ED", "", "", ""},
+		{"14", "Doble", "S\u00ED", "", "", ""},
+		{"15", "Sencilla", "S\u00ED", "", "", ""},
+		{"16", "Matrimonial", "S\u00ED", "", "", ""},
+		{"17", "Sencilla", "S\u00ED", "", "", ""},
+	};
 
 	public HABITACION() {
 		this.NumeroHabitacion = 0;
@@ -35,7 +48,7 @@ public class HABITACION {
 
 					// Cambiamos el estado de disponibilidad de la habitacion
 
-					ReservarHabitacion(numeroHabitacion, false, numeroReserva);
+					ReservarHabitacion(numeroHabitacion, false, numeroReserva, cedulaCliente, precioReserva);
 
 				} else if (HABITACION.habitaciones[k][1].equals("Doble")) {
 
@@ -47,7 +60,7 @@ public class HABITACION {
 
 					// Cambiamos el estado de disponibilidad de la habitacion
 
-					ReservarHabitacion(numeroHabitacion, false, numeroReserva);
+					ReservarHabitacion(numeroHabitacion, false, numeroReserva, cedulaCliente, precioReserva);
 
 				} else {
 
@@ -60,7 +73,7 @@ public class HABITACION {
 
 					// Cambiamos el estado de disponibilidad de la habitacion
 
-					ReservarHabitacion(numeroHabitacion, false, numeroReserva);
+					ReservarHabitacion(numeroHabitacion, false, numeroReserva, cedulaCliente, precioReserva);
 				}
 				break;
 			}
@@ -69,16 +82,20 @@ public class HABITACION {
 		return precioReserva;
 	}
 
-	public void ReservarHabitacion(String id_habitacion, boolean disponible, String numeroReserva) {
+	public void ReservarHabitacion(String id_habitacion, boolean disponible, String numeroReserva, String cedulaCliente, String precioReserva) {
 		
 		for (int i = 0; i < habitaciones.length; i++) {
 			if (habitaciones[i][0].equals(id_habitacion)) {
 				if (disponible) {
 					habitaciones[i][2] = "Sí";
 					habitaciones[i][3] = numeroReserva;
+					habitaciones[i][4] = cedulaCliente;
+					habitaciones[i][5] = precioReserva;
 				} else {
 					habitaciones[i][2] = "No";
 					habitaciones[i][3] = numeroReserva;
+					habitaciones[i][4] = cedulaCliente;
+					habitaciones[i][5] = precioReserva;
 				}
 				break;
 			}

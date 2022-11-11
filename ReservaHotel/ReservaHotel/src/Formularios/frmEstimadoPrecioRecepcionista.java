@@ -61,7 +61,9 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Regresar");
+		JButton btnNewButton = new JButton("REGRESAR");
+		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -72,15 +74,18 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(10, 11, 89, 23);
+		btnNewButton.setBounds(10, 11, 126, 23);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblCedulaCliente = new JLabel("Cédula cliente");
+		lblCedulaCliente.setForeground(new Color(0, 0, 0));
 		lblCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		lblCedulaCliente.setBounds(226, 134, 83, 14);
 		contentPane.add(lblCedulaCliente);
 		
-		JButton btnPrecioEstimado = new JButton("Precio estimado");
+		JButton btnPrecioEstimado = new JButton("PRECIO ESTIMADO");
+		btnPrecioEstimado.setBackground(new Color(255, 255, 255));
+		btnPrecioEstimado.setForeground(new Color(0, 0, 0));
 		btnPrecioEstimado.setFont(new Font("Arial", Font.BOLD, 12));
 		btnPrecioEstimado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -92,15 +97,17 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 				
 			}
 		});
-		btnPrecioEstimado.setBounds(319, 462, 139, 23);
+		btnPrecioEstimado.setBounds(289, 462, 190, 23);
 		contentPane.add(btnPrecioEstimado);
 		
 		JLabel lblPrecioEstimado = new JLabel("El precio estimado es de:");
+		lblPrecioEstimado.setForeground(new Color(0, 0, 0));
 		lblPrecioEstimado.setFont(new Font("Arial", Font.BOLD, 12));
 		lblPrecioEstimado.setBounds(226, 314, 166, 14);
 		contentPane.add(lblPrecioEstimado);
 		
 		textCalculado = new JTextField();
+		textCalculado.setForeground(new Color(0, 0, 0));
 		textCalculado.setFont(new Font("Arial", Font.BOLD, 12));
 		textCalculado.setEnabled(false);
 		textCalculado.setBounds(402, 311, 96, 20);
@@ -108,29 +115,34 @@ public class frmEstimadoPrecioRecepcionista extends JFrame {
 		textCalculado.setColumns(10);
 		
 		textCedulaCliente = new JTextField();
+		textCedulaCliente.setForeground(new Color(0, 0, 0));
 		textCedulaCliente.setFont(new Font("Arial", Font.BOLD, 12));
 		textCedulaCliente.setBounds(226, 159, 117, 20);
 		contentPane.add(textCedulaCliente);
 		textCedulaCliente.setColumns(10);
 		
 		JLabel lblTipoHabitacion = new JLabel("Tipo habitación");
+		lblTipoHabitacion.setForeground(new Color(0, 0, 0));
 		lblTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		lblTipoHabitacion.setBounds(226, 190, 105, 14);
 		contentPane.add(lblTipoHabitacion);
 		
 		JLabel lblNumeroDeNoches = new JLabel("Número de noches");
+		lblNumeroDeNoches.setForeground(new Color(0, 0, 0));
 		lblNumeroDeNoches.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNumeroDeNoches.setBounds(385, 134, 126, 14);
 		contentPane.add(lblNumeroDeNoches);
 		
 		textNumeroNoches = new JTextField();
+		textNumeroNoches.setForeground(new Color(0, 0, 0));
 		textNumeroNoches.setFont(new Font("Arial", Font.BOLD, 12));
 		textNumeroNoches.setText("");
-		textNumeroNoches.setBounds(416, 211, 105, 20);
+		textNumeroNoches.setBounds(385, 159, 105, 20);
 		contentPane.add(textNumeroNoches);
 		textNumeroNoches.setColumns(10);
 		
 		JComboBox comboBoxTipoHabitacion = new JComboBox();
+		comboBoxTipoHabitacion.setForeground(new Color(0, 0, 0));
 		comboBoxTipoHabitacion.setFont(new Font("Arial", Font.BOLD, 12));
 		comboBoxTipoHabitacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -80,7 +80,9 @@ public class frmEliminarCliente extends JFrame {
 		btnRegresar.setBounds(10, 11, 89, 23);
 		contentPane.add(btnRegresar);
 
-		JButton btnEliminar = new JButton("Eliminar");
+		JButton btnEliminar = new JButton("ELIMINAR");
+		btnEliminar.setBackground(new Color(255, 255, 255));
+		btnEliminar.setForeground(new Color(0, 0, 0));
 		btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -97,7 +99,7 @@ public class frmEliminarCliente extends JFrame {
 				JOptionPane.showMessageDialog(null, "Cliente eliminado correctamente");
 			}
 		});
-		btnEliminar.setBounds(331, 457, 89, 23);
+		btnEliminar.setBounds(331, 457, 122, 23);
 		contentPane.add(btnEliminar);
 		
 		JLabel lblEliminarCliente = new JLabel("Eliminar cliente");
