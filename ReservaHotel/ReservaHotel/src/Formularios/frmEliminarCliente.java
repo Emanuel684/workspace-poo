@@ -67,6 +67,8 @@ public class frmEliminarCliente extends JFrame {
 		contentPane.add(lblCedulaCliente);
 
 		JButton btnRegresar = new JButton("Regresar");
+		btnRegresar.setForeground(new Color(0, 0, 0));
+		btnRegresar.setBackground(new Color(255, 255, 255));
 		btnRegresar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnRegresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
