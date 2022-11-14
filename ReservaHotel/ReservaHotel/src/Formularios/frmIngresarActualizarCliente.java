@@ -100,7 +100,7 @@ public class frmIngresarActualizarCliente extends JFrame {
 		
 		JLabel lblFechaDeNacimiento = new JLabel("Fecha de nacimiento");
 		lblFechaDeNacimiento.setFont(new Font("Arial", Font.BOLD, 12));
-		lblFechaDeNacimiento.setBounds(207, 240, 113, 14);
+		lblFechaDeNacimiento.setBounds(207, 240, 153, 14);
 		contentPane.add(lblFechaDeNacimiento);
 		
 		JLabel lblDia = new JLabel("Dia");
