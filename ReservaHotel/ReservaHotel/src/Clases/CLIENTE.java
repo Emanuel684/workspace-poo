@@ -47,6 +47,31 @@ public class CLIENTE {
 	}
 
 	public void EliminarCliente(String cedulaCliente) {
+		
+		for (int i = 0; i < INICIO.datosClientes.length; i++) {
+			
+			if(INICIO.datosClientes[i][0].equals(cedulaCliente)) {
+				
+				for(int j = 0; j < INICIO.datosClientesHabituales.length; j++) {
+					
+					if(INICIO.datosClientesHabituales[j][0].equals(cedulaCliente)) {
+						
+						INICIO.datosClientesHabituales[j][0] = "";
+						INICIO.datosClientesHabituales[j][1] = "";
+						INICIO.datosClientesHabituales[j][2] = "";
+						INICIO.datosClientesHabituales[j][3] = "";
+						INICIO.datosClientesHabituales[j][4] = "";
+						
+						
+						break;
+					}
+					
+				}
+				break;
+			}
+			
+
+		}
 
 		for (int i = 0; i < INICIO.datosClientes.length; i++) {
 			if (INICIO.datosClientes[i][0].equals(cedulaCliente)) {
